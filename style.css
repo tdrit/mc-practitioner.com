@@ -38,7 +38,6 @@ body {
   font-weight: 500;
   line-height: 1.85;
   -webkit-font-smoothing: antialiased;
-  word-break: keep-all;
   overflow-wrap: break-word;
 }
 a { color: var(--navy); }
