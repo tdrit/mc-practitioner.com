@@ -165,6 +165,7 @@ img, svg { max-width: 100%; }
 #top { scroll-margin-top: 0; }
 .section.alt { background: var(--paper-alt); }
 #research { background: #fbe7ec; }
+#research h2 { color: #1e3a5f; }
 .section h2 {
   font-size: clamp(26px, 3.6vw, 32px); margin: 0 0 10px; font-weight: 800; color: var(--navy);
 }
@@ -190,7 +191,7 @@ img, svg { max-width: 100%; }
   font-size: 18px; font-weight: 600; padding: 14px 18px 14px 44px; position: relative; color: var(--ink);
   background: var(--paper-alt); border-radius: 6px; border-left: 4px solid var(--navy);
 }
-.pain-list li::before { content: "✓"; position: absolute; left: 16px; color: var(--teal); font-weight: 800; font-size: 19px; }
+.pain-list li::before { content: "✓"; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--teal); font-weight: 800; font-size: 19px; }
 
 /* strengths — bold numbered cards */
 .strength-grid { display: grid; gap: 18px; counter-reset: strength; }
@@ -199,7 +200,7 @@ img, svg { max-width: 100%; }
   .strength-grid .strength-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 .strength-card {
-  background: var(--navy); color: #fff; border-radius: 8px; padding: 26px 22px;
+  background: #1e3a5f; color: #fff; border-radius: 8px; padding: 26px 22px;
   font-size: 17px; font-weight: 600; line-height: 1.75; position: relative;
 }
 .strength-card::before {
@@ -233,7 +234,7 @@ img, svg { max-width: 100%; }
 
 /* pricing */
 .price-message {
-  background: var(--navy); color: #fff; border-radius: 10px;
+  background: #1e3a5f; color: #fff; border-radius: 10px;
   padding: 40px 36px; margin: 0 0 20px;
 }
 .price-message-main {
@@ -251,8 +252,8 @@ img, svg { max-width: 100%; }
   font-size: 14.5px; font-weight: 800; letter-spacing: 0.03em; padding: 7px 18px; border-radius: 999px;
   box-shadow: 0 3px 10px rgba(201,140,83,0.45);
 }
-.price-message-monitor p { margin: 0; font-size: 17.5px; font-weight: 700; color: var(--navy); line-height: 1.85; }
-.monitor-period { display: block; font-size: 14px; color: var(--ink-soft); font-weight: 600; margin-top: 4px; }
+.price-message-monitor p { margin: 0; font-size: 17.5px; font-weight: 700; color: #1e3a5f; line-height: 1.85; }
+.monitor-period { display: block; font-size: 14px; color: #5c564c; font-weight: 600; margin-top: 4px; }
 .pricing-cta { text-align: center; margin-top: 28px; }
 .table-wrap { overflow-x: auto; margin-top: 26px; }
 
@@ -266,10 +267,10 @@ img, svg { max-width: 100%; }
   display: inline-block; background: var(--teal); color: #fff; font-size: 13px; font-weight: 800;
   letter-spacing: 0.03em; padding: 5px 14px; border-radius: 999px; margin-bottom: 16px;
 }
-.research-box p { margin: 0 0 14px; font-size: 16.5px; color: var(--ink); font-weight: 500; line-height: 1.85; }
+.research-box p { margin: 0 0 14px; font-size: 16.5px; color: #241f19; font-weight: 500; line-height: 1.85; }
 .research-box p:last-child { margin-bottom: 0; }
-.research-lead { display: block; font-weight: 800; font-size: 18px; color: var(--navy); }
-.research-period { display: block; font-size: 13.5px; color: var(--ink-soft); font-weight: 600; margin-top: 6px; }
+.research-lead { display: block; font-weight: 800; font-size: 18px; color: #1e3a5f; }
+.research-period { display: block; font-size: 13.5px; color: #5c564c; font-weight: 600; margin-top: 6px; }
 
 /* column (note) */
 .column-box {
@@ -371,7 +372,7 @@ table.price td.amount { font-variant-numeric: tabular-nums; white-space: nowrap;
 
 /* contact */
 .contact-box {
-  background: var(--navy); color: #fff; border-radius: 10px;
+  background: #1e3a5f; color: #fff; border-radius: 10px;
   padding: 44px 36px; text-align: center; max-width: 620px; margin: 0 auto;
 }
 .contact-box p { color: rgba(255,255,255,0.9); font-size: 17.5px; margin: 0 0 26px; font-weight: 500; }
