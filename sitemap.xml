@@ -4,15 +4,18 @@
     <loc>https://mc-practitioner.netlify.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <lastmod>2026-07-18</lastmod>
   </url>
   <url>
     <loc>https://mc-practitioner.netlify.app/column-01.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <lastmod>2026-07-18</lastmod>
   </url>
   <url>
     <loc>https://mc-practitioner.netlify.app/diagnosis.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <lastmod>2026-07-18</lastmod>
   </url>
 </urlset>
