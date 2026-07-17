@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>マイクロクレデンシャル導入診断｜マイクロクレデンシャル・プラクティショナー</title>
+  <meta name="description" content="6つの質問に答えるだけで、あなたの組織にとって最適なマイクロクレデンシャル導入の進め方を無料診断します。">
+  <link rel="canonical" href="https://mc-practitioner.netlify.app/diagnosis.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="site-logo" href="index.html" aria-label="マイクロクレデンシャル・プラクティショナー">
+      <span class="logo-full">マイクロクレデンシャル・プラクティショナー</span>
+      <span class="logo-short">MC</span>
+    </a>
+    <a class="nav-cta" href="index.html">トップに戻る</a>
+  </nav>
+
+  <section class="section">
+    <div class="wrap article-wrap">
+      <p class="article-back"><a href="index.html">← トップに戻る</a></p>
+      <h1 class="article-title">マイクロクレデンシャル導入診断</h1>
+      <p class="section-lede">6つの質問に答えるだけで、あなたの組織に今おすすめの進め方を無料診断します。（所要時間：約1分）</p>
+
+      <form id="diag-form" class="diag-form">
+        <fieldset class="diag-q">
+          <legend>Q1. マイクロクレデンシャル（MC）をご存知ですか？</legend>
+          <label><input type="radio" name="q1" value="know" required> よく知っている</label>
+          <label><input type="radio" name="q1" value="heard"> 名前は聞いたことがある程度</label>
+          <label><input type="radio" name="q1" value="new"> 今回初めて知った</label>
+        </fieldset>
+
+        <fieldset class="diag-q">
+          <legend>Q2. あなたにとって、MCのメリットは何ですか？（複数選択可）</legend>
+          <label><input type="checkbox" name="q2" value="reskilling"> リスキリング・社会人向け教育の充実</label>
+          <label><input type="checkbox" name="q2" value="acquisition"> 学生・受講者の新規獲得</label>
+          <label><input type="checkbox" name="q2" value="hiring"> スキルベース採用・人材の可視化</label>
+          <label><input type="checkbox" name="q2" value="branding"> 国際化・ブランディング</label>
+          <label><input type="checkbox" name="q2" value="partnership"> 産学連携の強化</label>
+          <label><input type="checkbox" name="q2" value="subsidy"> 補助金・助成金の活用</label>
+        </fieldset>
+
+        <fieldset class="diag-q">
+          <legend>Q3. あなたにとって、MC導入の一番の壁は何ですか？（複数選択可）</legend>
+          <label><input type="checkbox" name="q3" value="start"> 何から始めればいいかわからない</label>
+          <label><input type="checkbox" name="q3" value="consensus"> 組織内の合意形成が進まない</label>
+          <label><input type="checkbox" name="q3" value="quality"> 質保証の設計方法がわからない</label>
+          <label><input type="checkbox" name="q3" value="certificate"> 証明書の設計方法がわからない</label>
+          <label><input type="checkbox" name="q3" value="budget"> 予算が足りない</label>
+          <label><input type="checkbox" name="q3" value="manpower"> 人手が足りない</label>
+          <label><input type="checkbox" name="q3" value="retention"> 定着・継続の方法がわからない</label>
+        </fieldset>
+
+        <fieldset class="diag-q">
+          <legend>Q4. 既に、MCにしたいプログラムはありますか？</legend>
+          <label><input type="radio" name="q4" value="fixed" required> 具体的に決まっている</label>
+          <label><input type="radio" name="q4" value="candidate"> 候補はあるが未定</label>
+          <label><input type="radio" name="q4" value="none"> まだ何も決まっていない</label>
+        </fieldset>
+
+        <fieldset class="diag-q">
+          <legend>Q5. MCを受講する対象者は誰ですか？</legend>
+          <label><input type="radio" name="q5" value="student" required> 在学生</label>
+          <label><input type="radio" name="q5" value="reskill"> 在職社会人・求職者（リスキリング）</label>
+          <label><input type="radio" name="q5" value="senior"> 主婦・シニア等（学び直し）</label>
+          <label><input type="radio" name="q5" value="employee"> 自社の社員</label>
+          <label><input type="radio" name="q5" value="undecided"> まだ未定</label>
+        </fieldset>
+
+        <fieldset class="diag-q">
+          <legend>Q6. MCについて企業と連携しますか？</legend>
+          <label><input type="radio" name="q6" value="doing" required> 既に連携予定・検討中</label>
+          <label><input type="radio" name="q6" value="future"> 将来的に検討したい</label>
+          <label><input type="radio" name="q6" value="no"> 特に考えていない</label>
+        </fieldset>
+
+        <div class="diag-submit">
+          <button type="submit" class="btn-primary">診断する</button>
+        </div>
+      </form>
+
+      <div id="diag-result" class="diag-result" hidden>
+        <span class="research-badge" id="diag-badge"></span>
+        <h2 id="diag-title"></h2>
+        <p id="diag-body"></p>
+        <ul id="diag-points" class="diag-points"></ul>
+        <div class="pricing-cta">
+          <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd5oUOj8Ck8wE3Hwj7ufdpu-jSB_62y5FVG2VPsJdA2GsGpLA/viewform?usp=header" target="_blank" rel="noopener">まずは無料で相談してみる</a>
+          <p class="diag-retry"><a href="#" id="diag-reset">もう一度診断する</a></p>
+        </div>
+      </div>
+
+      <p class="article-back article-back-bottom"><a href="index.html">← トップに戻る</a></p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer-inner">
+      <span>© マイクロクレデンシャル・プラクティショナー</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById('diag-form');
+      var result = document.getElementById('diag-result');
+      var badge = document.getElementById('diag-badge');
+      var title = document.getElementById('diag-title');
+      var body = document.getElementById('diag-body');
+      var points = document.getElementById('diag-points');
+
+      var PHASES = {
+        intro: {
+          badge: '導入フェーズ',
+          title: 'まずは「導入フェーズ」から始めましょう',
+          body: '組織内の理解増進や、MC化するプログラムの検討・制度設計の土台づくりからご一緒できます。焦らず、一歩目から伴走します。',
+          items: ['教職員・社員向けの理解増進', 'MC設計の提案', '各種資料の作成']
+        },
+        implement: {
+          badge: '実装フェーズ',
+          title: '「実装フェーズ」の支援が適しています',
+          body: '対象プログラムの方向性は見えてきているので、質保証設計・証明書設計・規定整備など、具体的な制度設計を重点的にサポートします。',
+          items: ['質保証設計の支援', '証明書設計の支援', '規定の作成・改正支援']
+        },
+        retention: {
+          badge: '定着・拡大フェーズ',
+          title: '「定着・拡大フェーズ」の支援が適しています',
+          body: '導入後の運用に課題を感じているようです。効果検証・広報・補助金申請など、定着と展開を重点的にサポートします。',
+          items: ['成果の分析', '広報の支援', '補助金申請の支援']
+        }
+      };
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var data = new FormData(form);
+        var q1 = data.get('q1');
+        var q3 = data.getAll('q3');
+        var q4 = data.get('q4');
+
+        var score = { intro: 0, implement: 0, retention: 0 };
+
+        if (q1 === 'new') score.intro += 2;
+        if (q1 === 'heard') score.intro += 1;
+
+        if (q3.indexOf('start') !== -1) score.intro += 2;
+        if (q3.indexOf('consensus') !== -1) score.intro += 2;
+        if (q3.indexOf('budget') !== -1) score.intro += 1;
+        if (q3.indexOf('manpower') !== -1) score.intro += 1;
+        if (q3.indexOf('quality') !== -1) score.implement += 2;
+        if (q3.indexOf('certificate') !== -1) score.implement += 2;
+        if (q3.indexOf('retention') !== -1) score.retention += 2;
+
+        if (q4 === 'none') score.intro += 2;
+        if (q4 === 'candidate') score.implement += 1;
+        if (q4 === 'fixed') score.implement += 2;
+
+        var winner = 'intro';
+        if (score.implement > score[winner]) winner = 'implement';
+        if (score.retention > score[winner]) winner = 'retention';
+
+        var phase = PHASES[winner];
+        badge.textContent = phase.badge;
+        title.textContent = phase.title;
+        body.textContent = phase.body;
+        points.innerHTML = '';
+        phase.items.forEach(function (t) {
+          var li = document.createElement('li');
+          li.textContent = t;
+          points.appendChild(li);
+        });
+
+        form.hidden = true;
+        result.hidden = false;
+        result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      document.getElementById('diag-reset').addEventListener('click', function (e) {
+        e.preventDefault();
+        form.reset();
+        result.hidden = true;
+        form.hidden = false;
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    })();
+  </script>
+
+</body>
+</html>
