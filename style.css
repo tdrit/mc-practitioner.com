@@ -360,8 +360,16 @@ img, svg { max-width: 100%; }
 }
 .diag-result h2 { color: #1e3a5f; font-size: 22px; margin: 14px 0 12px; }
 .diag-result p { color: #241f19; font-size: 16px; line-height: 1.85; margin: 0 0 18px; }
+.diag-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
+.diag-badge-pattern { background: #1e3a5f; }
+.diag-summary {
+  background: #f7f1e4; border-left: 4px solid #2f8f88; border-radius: 4px;
+  padding: 16px 20px; font-size: 15px; color: #241f19;
+}
+.diag-subhead { color: #1e3a5f; font-size: 17px; font-weight: 800; margin: 28px 0 12px; }
 .diag-points { margin: 0 0 26px; padding-left: 22px; }
 .diag-points li { font-size: 15.5px; color: #241f19; margin-bottom: 8px; }
+.diag-disclaimer { font-size: 13px; color: #5c564c; border-top: 1px solid #e6ddc9; padding-top: 18px; margin-bottom: 0; }
 .diag-retry { margin: 16px 0 0; font-size: 14px; }
 .diag-retry a { color: var(--teal-deep); font-weight: 700; }
 table.price {

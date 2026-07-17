@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>マイクロクレデンシャル導入診断｜マイクロクレデンシャル・プラクティショナー</title>
-  <meta name="description" content="6つの質問に答えるだけで、あなたの組織にとって最適なマイクロクレデンシャル導入の進め方を無料診断します。">
+  <meta name="description" content="6つの質問に答えるだけで、あなたの組織にとって最適なマイクロクレデンシャル導入の進め方を無料診断します。回答内容をもとに、今の段階・適したMCのタイプ・次に必要なステップを詳しく分析します。">
   <link rel="canonical" href="https://mc-practitioner.netlify.app/diagnosis.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
     <div class="wrap article-wrap">
       <p class="article-back"><a href="index.html">← トップに戻る</a></p>
       <h1 class="article-title">マイクロクレデンシャル導入診断</h1>
-      <p class="section-lede">6つの質問に答えるだけで、あなたの組織に今おすすめの進め方を無料診断します。（所要時間：約1分）</p>
+      <p class="section-lede">6つの質問に答えるだけで、あなたの組織に今おすすめの進め方を無料診断します。回答内容をもとに、今の段階・適したMCのタイプ・次に必要なステップを詳しく分析します。（所要時間：約1分）</p>
 
       <form id="diag-form" class="diag-form">
         <fieldset class="diag-q">
@@ -85,10 +85,27 @@
       </form>
 
       <div id="diag-result" class="diag-result" hidden>
-        <span class="research-badge" id="diag-badge"></span>
+        <div class="diag-badges">
+          <span class="research-badge" id="diag-badge-phase"></span>
+          <span class="research-badge diag-badge-pattern" id="diag-badge-pattern"></span>
+        </div>
         <h2 id="diag-title"></h2>
+
+        <p class="diag-summary" id="diag-summary"></p>
+
         <p id="diag-body"></p>
+
+        <h3 class="diag-subhead">適したMCの方向性</h3>
+        <p id="diag-pattern-desc"></p>
+
+        <h3 class="diag-subhead">想定される壁</h3>
+        <ul id="diag-barriers" class="diag-points"></ul>
+
+        <h3 class="diag-subhead">次のステップ</h3>
         <ul id="diag-points" class="diag-points"></ul>
+
+        <p class="diag-disclaimer">本診断はAIによる一次分析であり、実際の制度設計にあたっては専門家によるレビュー・最終判断が必要です。より詳しい状況を踏まえた具体的なご提案をご希望の場合は、下記より無料相談をご利用ください。</p>
+
         <div class="pricing-cta">
           <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd5oUOj8Ck8wE3Hwj7ufdpu-jSB_62y5FVG2VPsJdA2GsGpLA/viewform?usp=header" target="_blank" rel="noopener">まずは無料で相談してみる</a>
           <p class="diag-retry"><a href="#" id="diag-reset">もう一度診断する</a></p>
@@ -109,39 +126,115 @@
     (function () {
       var form = document.getElementById('diag-form');
       var result = document.getElementById('diag-result');
-      var badge = document.getElementById('diag-badge');
+      var badgePhase = document.getElementById('diag-badge-phase');
+      var badgePattern = document.getElementById('diag-badge-pattern');
       var title = document.getElementById('diag-title');
+      var summaryEl = document.getElementById('diag-summary');
       var body = document.getElementById('diag-body');
+      var patternDesc = document.getElementById('diag-pattern-desc');
+      var barriersEl = document.getElementById('diag-barriers');
       var points = document.getElementById('diag-points');
+
+      var LABELS = {
+        q1: { know: 'よく知っている', heard: '名前は聞いたことがある程度', new: '今回初めて知った' },
+        q2: {
+          reskilling: 'リスキリング・社会人向け教育の充実', acquisition: '学生・受講者の新規獲得',
+          hiring: 'スキルベース採用・人材の可視化', branding: '国際化・ブランディング',
+          partnership: '産学連携の強化', subsidy: '補助金・助成金の活用'
+        },
+        q3: {
+          start: '何から始めればいいかわからない', consensus: '組織内の合意形成が進まない',
+          quality: '質保証の設計方法がわからない', certificate: '証明書の設計方法がわからない',
+          budget: '予算が足りない', manpower: '人手が足りない', retention: '定着・継続の方法がわからない'
+        },
+        q4: { fixed: '具体的に決まっている', candidate: '候補はあるが未定', none: 'まだ何も決まっていない' },
+        q5: {
+          student: '在学生', reskill: '在職社会人・求職者（リスキリング）', senior: '主婦・シニア等（学び直し）',
+          employee: '自社の社員', undecided: 'まだ未定'
+        },
+        q6: { doing: '既に連携予定・検討中', future: '将来的に検討したい', no: '特に考えていない' }
+      };
 
       var PHASES = {
         intro: {
           badge: '導入フェーズ',
           title: 'まずは「導入フェーズ」から始めましょう',
-          body: '組織内の理解増進や、MC化するプログラムの検討・制度設計の土台づくりからご一緒できます。焦らず、一歩目から伴走します。',
-          items: ['教職員・社員向けの理解増進', 'MC設計の提案', '各種資料の作成']
+          body: '組織内の理解増進や、MC化するプログラムの検討・制度設計の土台づくりからご一緒できます。焦らず、一歩目から伴走します。'
         },
         implement: {
           badge: '実装フェーズ',
           title: '「実装フェーズ」の支援が適しています',
-          body: '対象プログラムの方向性は見えてきているので、質保証設計・証明書設計・規定整備など、具体的な制度設計を重点的にサポートします。',
-          items: ['質保証設計の支援', '証明書設計の支援', '規定の作成・改正支援']
+          body: '対象プログラムの方向性は見えてきているので、質保証設計・証明書設計・規定整備など、具体的な制度設計を重点的にサポートします。'
         },
         retention: {
           badge: '定着・拡大フェーズ',
           title: '「定着・拡大フェーズ」の支援が適しています',
-          body: '導入後の運用に課題を感じているようです。効果検証・広報・補助金申請など、定着と展開を重点的にサポートします。',
-          items: ['成果の分析', '広報の支援', '補助金申請の支援']
+          body: '導入後の運用に課題を感じているようです。効果検証・広報・補助金申請など、定着と展開を重点的にサポートします。'
         }
       };
 
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var data = new FormData(form);
-        var q1 = data.get('q1');
-        var q3 = data.getAll('q3');
-        var q4 = data.get('q4');
+      var PATTERNS = {
+        A: {
+          badge: 'パターンA：在学生向けMC',
+          desc: '在学生向けに、正課・準正課プログラムを通じて学修成果を可視化するタイプです。学生のキャリア形成支援や、大学等の特色化・ブランディングに活かしやすい方向性です。',
+          barriers: ['教務規程・単位認定制度との整合', '既存カリキュラムとの接続・すみ分け', '学内（教務・キャリアセンター等）での合意形成']
+        },
+        B: {
+          badge: 'パターンB：企業連携型MC',
+          desc: '企業と連携し、実務スキルの証明を採用・人材育成に直結させるタイプです。連携先企業のニーズと、教育機関側のリソース・カリキュラムをどう橋渡しするかが鍵になります。',
+          barriers: ['連携先企業との役割・費用分担の整理', '双方のブランディング・広報方針のすり合わせ', '連携を継続させるための体制づくり']
+        },
+        C: {
+          badge: 'パターンC：社会人リスキリング型MC',
+          desc: '在職社会人・求職者・学び直し層など、非学位型のプログラムで学ぶ人向けのタイプです。集客力と、修了要件・評価基準の明確さが成果を左右します。',
+          barriers: ['受講者の集客・広報チャネルの確保', '評価基準・修了要件の明確化', '受講継続のための動機付け設計']
+        },
+        undecided: {
+          badge: '対象者：検討中',
+          desc: '対象者がまだ固まっていない段階のようです。MCは「在学生向け」「企業連携型」「社会人リスキリング型」で設計の勘所が大きく異なるため、まずは対象者を仮決めするところから始めるのが近道です。',
+          barriers: ['対象者（在学生／企業連携／社会人リスキリング）の絞り込み', 'パターンごとの必要リソース・体制の違いの整理', '仮決めした対象者に基づく設計の早期レビュー']
+        }
+      };
 
+      var NEXT_STEPS = {
+        intro: {
+          A: ['学内の関係部署（教務・キャリアセンター等）への説明資料の作成', '対象プログラムの候補選定とMC化の目的整理', '学生・教職員向けの理解増進の場づくり'],
+          B: ['連携候補企業へのヒアリング・意向確認', '連携の目的とMC化するプログラム範囲の整理', '社内外への説明資料の作成'],
+          C: ['受講対象者（在職者・求職者・学び直し層等）の明確化', 'MC化するプログラム候補の選定', '想定する集客チャネルの整理'],
+          undecided: ['「誰のためのMCか」を整理する簡易ワークショップ', 'パターン別（在学生／企業連携／社会人リスキリング）の比較検討', 'MC化の目的（採用力強化か、収益化か等）の言語化']
+        },
+        implement: {
+          A: ['学修成果記述子の設計と単位・成績評価との整合確認', '学内の質保証体制・規程との整合', 'デジタルバッジ等の証明書様式の設計'],
+          B: ['連携企業と共同での評価基準・記述子の設計', '費用・役割分担を含む連携協定の整理', 'Open Badges等のメタデータ設計'],
+          C: ['学習成果記述子の作成と評価基準の明確化', '修了要件・質保証の設計', 'デジタルバッジ等の発行体制の整備'],
+          undecided: ['対象者を仮決めした上での記述子ドラフト作成', '複数パターンを想定した評価基準の比較検討', '早期に専門家レビューを受けて方向性を固める']
+        },
+        retention: {
+          A: ['学生への周知・活用実績の可視化', '他プログラムへの展開検討', '大学案内・広報物への反映'],
+          B: ['連携企業への成果報告と次年度以降の継続提案', '採用・人材育成での活用実績の可視化', '連携範囲（他部門・他企業）の拡大検討'],
+          C: ['受講者アンケート等をもとにした内容改善', '広報・集客チャネルの拡大', '補助金・助成金の活用検討'],
+          undecided: ['対象者・パターンを明確化した上での定着施策の再設計', '既存の運用実績の棚卸し', '専門家レビューによる継続方針の確認']
+        }
+      };
+
+      function labelsFor(qKey, values) {
+        var map = LABELS[qKey];
+        return values.map(function (v) { return map[v]; }).filter(Boolean);
+      }
+
+      function joinJa(list) {
+        return list.join('・');
+      }
+
+      function determinePattern(q5, q6) {
+        if (q5 === 'student') return 'A';
+        if (q5 === 'employee') return 'B';
+        if (q5 === 'reskill' || q5 === 'senior') return 'C';
+        if (q6 === 'doing') return 'B';
+        return 'undecided';
+      }
+
+      function determinePhase(q1, q3, q4) {
         var score = { intro: 0, implement: 0, retention: 0 };
 
         if (q1 === 'new') score.intro += 2;
@@ -162,13 +255,67 @@
         var winner = 'intro';
         if (score.implement > score[winner]) winner = 'implement';
         if (score.retention > score[winner]) winner = 'retention';
+        return winner;
+      }
 
-        var phase = PHASES[winner];
-        badge.textContent = phase.badge;
-        title.textContent = phase.title;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var data = new FormData(form);
+        var q1 = data.get('q1');
+        var q2 = data.getAll('q2');
+        var q3 = data.getAll('q3');
+        var q4 = data.get('q4');
+        var q5 = data.get('q5');
+        var q6 = data.get('q6');
+
+        var phaseKey = determinePhase(q1, q3, q4);
+        var patternKey = determinePattern(q5, q6);
+        var phase = PHASES[phaseKey];
+        var pattern = PATTERNS[patternKey];
+
+        badgePhase.textContent = phase.badge;
+        badgePattern.textContent = pattern.badge;
+        title.textContent = phase.title + '（' + pattern.badge + '）';
         body.textContent = phase.body;
+        patternDesc.textContent = pattern.desc;
+
+        // 回答の要約（選んだ回答をそのまま引用する）
+        var q2Labels = labelsFor('q2', q2);
+        var q3Labels = labelsFor('q3', q3);
+        var summaryParts = [];
+        summaryParts.push('MCについては「' + LABELS.q1[q1] + '」とのことで、対象者は「' + LABELS.q5[q5] + '」、企業との連携については「' + LABELS.q6[q6] + '」というご状況でした。');
+        if (q2Labels.length) {
+          summaryParts.push('重視されているメリットは' + joinJa(q2Labels) + 'とのことです。');
+        }
+        if (q3Labels.length) {
+          summaryParts.push('現時点で感じている壁は' + joinJa(q3Labels) + 'とのことです。');
+        }
+        summaryParts.push('MC化したいプログラムについては「' + LABELS.q4[q4] + '」という段階です。');
+        summaryEl.textContent = 'ご回答の要約：' + summaryParts.join('');
+
+        // 企業連携の補足（対象者軸だけでは拾いきれない連携ニーズを補足）
+        if (patternKey !== 'B' && q6 === 'doing') {
+          patternDesc.textContent += '　また、既に企業との連携を予定・検討中とのことですので、' + PATTERNS[patternKey === 'undecided' ? 'undecided' : patternKey].badge + 'の設計に加えて、企業連携の要素（役割分担・費用・ブランディング調整）もあわせて検討する必要があります。';
+        } else if (patternKey !== 'B' && q6 === 'future') {
+          patternDesc.textContent += '　将来的に企業連携も検討したいとのことですので、後から連携を組み込みやすい設計（記述子や評価基準を過度に自校特化させない等）にしておくと安心です。';
+        }
+
+        // 想定される壁：本人が選んだ壁を先に、選ばれていないパターン特有の壁を後に
+        barriersEl.innerHTML = '';
+        q3Labels.forEach(function (t) {
+          var li = document.createElement('li');
+          li.textContent = t + '（すでに認識されている壁です）';
+          barriersEl.appendChild(li);
+        });
+        pattern.barriers.forEach(function (t) {
+          var li = document.createElement('li');
+          li.textContent = t + '（' + pattern.badge + 'で特に生じやすい壁です）';
+          barriersEl.appendChild(li);
+        });
+
+        // 次のステップ
         points.innerHTML = '';
-        phase.items.forEach(function (t) {
+        NEXT_STEPS[phaseKey][patternKey].forEach(function (t) {
           var li = document.createElement('li');
           li.textContent = t;
           points.appendChild(li);
