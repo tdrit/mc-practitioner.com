@@ -117,7 +117,7 @@
 </head>
 <body>
 
-  <div class="announce-bar">
+  <div class="announce-bar" id="top">
     <div class="wrap announce-bar-inner">
       <span class="announce-badge">お知らせ</span>
       <p>現在、マイクロクレデンシャルに関する調査研究に、ご協力いただける方を、募集しています（実施期間：2026年7月〜12月）。<a href="#research">詳しくはこちら</a></p>
@@ -126,6 +126,7 @@
 
   <nav class="site-nav">
     <a class="site-logo" href="#top" aria-label="マイクロクレデンシャル・プラクティショナー">
+      <img src="logo-mark.png" alt="" class="logo-mark">
       <span class="logo-full">マイクロクレデンシャル・プラクティショナー</span>
       <span class="logo-short">MC</span>
     </a>
@@ -146,7 +147,7 @@
     <a class="nav-cta" href="#contact">お問い合わせ</a>
   </nav>
 
-  <header class="hero" id="top">
+  <header class="hero">
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="wrap">
       <div class="hero-content">
@@ -198,34 +199,7 @@
       <p class="section-lede">導入の段階に合わせて、3つのフェーズで伴走します</p>
       <div class="service-grid">
         <div class="service-card">
-          <div class="service-photo service-photo-badge">
-            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <defs>
-                <linearGradient id="g1a" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#2f527f"/>
-                  <stop offset="100%" stop-color="#14273f"/>
-                </linearGradient>
-                <linearGradient id="g1b" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#e0a76e"/>
-                  <stop offset="100%" stop-color="#c98c53"/>
-                </linearGradient>
-                <filter id="shadow1" x="-50%" y="-50%" width="200%" height="200%">
-                  <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#14273f" flood-opacity="0.3"/>
-                </filter>
-              </defs>
-              <rect x="0" y="0" width="400" height="300" fill="#f7f1e4"/>
-              <circle cx="200" cy="150" r="132" fill="#eee2c9" opacity="0.55"/>
-              <g transform="translate(200,150)" filter="url(#shadow1)">
-                <rect x="-75" y="-96" width="150" height="192" rx="16" fill="url(#g1a)"/>
-                <rect x="-75" y="-96" width="150" height="192" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>
-                <line x1="-48" y1="-56" x2="48" y2="-56" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.95"/>
-                <line x1="-48" y1="-28" x2="48" y2="-28" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.65"/>
-                <line x1="-48" y1="0" x2="8" y2="0" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
-                <circle cx="48" cy="62" r="44" fill="url(#g1b)"/>
-                <circle cx="48" cy="62" r="44" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2"/>
-                <path d="M48,39 L48,85 M25,62 L71,62" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
-              </g>
-            </svg>
+          <div class="service-photo" style="background-image:url('service-intro.jpg');" role="img" aria-label="窓の明るいオフィスで行われている少人数セミナーの様子">
             <span class="photo-label">導入フェーズ</span>
           </div>
           <div class="service-body">
@@ -238,16 +212,7 @@
           </div>
         </div>
         <div class="service-card">
-          <div class="service-photo service-photo-badge">
-            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="0" y="0" width="400" height="300" fill="#f7f1e4"/>
-              <g transform="translate(200,150)">
-                <circle cx="-52" cy="-8" r="58" fill="#1e3a5f" opacity="0.92"/>
-                <circle cx="52" cy="-8" r="58" fill="#2f8f88" opacity="0.92"/>
-                <circle cx="0" cy="54" r="58" fill="#c98c53" opacity="0.88"/>
-                <path d="M-18,4 L-4,20 L22,-16" stroke="#ffffff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
-            </svg>
+          <div class="service-photo" style="background-image:url('service-implement.jpg');" role="img" aria-label="提案資料を囲んで和やかに話し合う様子">
             <span class="photo-label">実装フェーズ</span>
           </div>
           <div class="service-body">
@@ -260,30 +225,7 @@
           </div>
         </div>
         <div class="service-card">
-          <div class="service-photo service-photo-badge">
-            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="マイクロクレデンシャル証明書のサンプルイメージ（氏名・発行日・発行機関・内容・学習成果を記載）">
-              <defs>
-                <filter id="dummyBlur" x="-20%" y="-20%" width="140%" height="140%">
-                  <feGaussianBlur stdDeviation="2.6"/>
-                </filter>
-              </defs>
-              <rect x="0" y="0" width="400" height="300" fill="#f7f1e4"/>
-              <g transform="translate(70,150)">
-                <polygon points="0,-58 50,-29 50,29 0,58 -50,29 -50,-29" fill="#2f8f88"/>
-                <polygon points="0,-40 34,-20 34,20 0,40 -34,20 -34,-20" fill="#1e3a5f"/>
-                <path d="M-16,0 L-4,14 L18,-12" stroke="#ffffff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <polygon points="-18,55 0,40 18,55 12,95 0,80 -12,95" fill="#c98c53"/>
-              </g>
-              <g filter="url(#dummyBlur)" fill="#1e3a5f" font-family="sans-serif" font-size="15" font-weight="700">
-                <text x="165" y="90">氏名：〇〇〇〇〇〇〇〇</text>
-                <text x="165" y="118">発行日：20XX年XX月XX日</text>
-                <text x="165" y="146">発行機関：●●●●●●●●●●</text>
-                <text x="165" y="174">内容：▲▲▲／▲▲▲／▲▲▲</text>
-                <text x="165" y="202">学習成果：■■■■■■■■■■■■</text>
-              </g>
-              <rect x="165" y="215" width="190" height="10" rx="5" fill="#2f8f88" opacity="0.35"/>
-              <rect x="165" y="232" width="140" height="10" rx="5" fill="#2f8f88" opacity="0.25"/>
-            </svg>
+          <div class="service-photo" style="background-image:url('service-badge.jpg');" role="img" aria-label="デジタルのオープンバッジが表示されたノートパソコンの画面">
             <span class="photo-label">定着・拡大フェーズ</span>
           </div>
           <div class="service-body">
@@ -296,6 +238,12 @@
           </div>
         </div>
       </div>
+
+      <ul class="pain-list" style="margin-top:28px;">
+        <li>MCに関する各種ミーティングでのご説明、セミナーなどの啓蒙もします。</li>
+        <li>提案書、企画書、委員会資料、マニュアルなどの各種資料を作ります。</li>
+      </ul>
+      <p class="flow-footnote">詳しくは、下記をご参照ください。<br>そのほかにも必要な支援があれば、ご遠慮なくお聞かせください。</p>
 
     </div>
   </section>
