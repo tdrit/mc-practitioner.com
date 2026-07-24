@@ -205,7 +205,13 @@ img, svg { max-width: 100%; }
 .diag-promo-text { margin: 0; font-size: 16px; font-weight: 700; color: var(--navy); }
 
 .bridge-bubble {
-  position: relative; max-width: 820px; margin: 56px auto -85px; z-index: 1;
+  position: relative; max-width: 820px; margin: 56px auto -20px; z-index: 1;
+}
+@media (min-width: 600px) {
+  .bridge-bubble { margin-bottom: -50px; }
+}
+@media (min-width: 860px) {
+  .bridge-bubble { margin-bottom: -85px; }
 }
 #concerns { padding-bottom: 56px; }
 .bridge-bubble-shape { display: block; width: 100%; height: auto; }
