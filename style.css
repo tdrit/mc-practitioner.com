@@ -124,7 +124,7 @@ img, svg { max-width: 100%; }
 }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
-  background-image: url("hero-abstract.png");
+  background-image: url("hero-abstract.jpg");
   background-size: cover; background-position: center;
 }
 .hero .wrap { display: flex; justify-content: center; }
@@ -344,8 +344,8 @@ img, svg { max-width: 100%; }
   border: 1px solid var(--line); border-radius: 10px; padding: 22px 24px;
   background: var(--paper-alt); margin: 0;
 }
-.diag-q legend {
-  font-size: 16.5px; font-weight: 800; color: var(--navy); padding: 0 4px; margin-bottom: 14px;
+.diag-q-legend {
+  font-size: 16.5px; font-weight: 800; color: var(--navy); padding: 0 4px; margin: 0 0 14px;
 }
 .diag-q label {
   display: block; font-size: 15.5px; font-weight: 500; color: var(--ink);
@@ -421,6 +421,26 @@ table.price td.amount { font-variant-numeric: tabular-nums; white-space: nowrap;
 .contact-box p { color: rgba(255,255,255,0.9); font-size: 17.5px; margin: 0 0 26px; font-weight: 500; }
 .contact-box .btn-primary { font-size: 17px; padding: 16px 36px; }
 .contact-note { font-size: 13.5px; color: rgba(255,255,255,0.75); margin-top: 20px; }
+.contact-form { max-width: 620px; margin: 40px auto 0; }
+.contact-field {
+  display: block; font-size: 15.5px; font-weight: 700; color: var(--ink);
+  margin-bottom: 20px;
+}
+.contact-field:last-child { margin-bottom: 0; }
+.contact-field .req {
+  font-size: 15.5px; font-weight: 700; color: #b0432f; margin-left: 4px;
+  vertical-align: middle;
+}
+.contact-field input, .contact-field textarea, .contact-field select {
+  display: block; width: 100%; margin-top: 8px; padding: 12px 14px;
+  border: 1px solid var(--line); border-radius: 6px; font-size: 15.5px;
+  font-family: inherit; color: var(--ink); background: var(--paper);
+  box-sizing: border-box; resize: vertical;
+}
+.contact-privacy-note {
+  font-size: 13.5px; color: var(--ink-soft); text-align: center; margin-top: 24px;
+}
+.contact-privacy-note a { color: var(--teal-deep); font-weight: 700; }
 
 /* back to top */
 .back-to-top {

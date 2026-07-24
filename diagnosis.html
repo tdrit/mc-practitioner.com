@@ -13,15 +13,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>マイクロクレデンシャル導入診断｜マイクロクレデンシャル・プラクティショナー</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta name="description" content="6つの質問に答えるだけで、あなたの組織にとって最適なマイクロクレデンシャル導入の進め方を無料診断します。回答内容をもとに、今の段階・適したMCのタイプ・次に必要なステップを詳しく分析します。">
+  <meta name="description" content="7つの質問に答えるだけで、あなたの組織にとって最適なマイクロクレデンシャル導入の進め方を無料診断します。回答内容をもとに、今の段階・適したMCのタイプ・次に必要なステップを詳しく分析します。">
   <link rel="canonical" href="https://mc-practitioner.netlify.app/diagnosis.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="マイクロクレデンシャル・プラクティショナー">
   <meta property="og:title" content="マイクロクレデンシャル導入診断｜マイクロクレデンシャル・プラクティショナー">
-  <meta property="og:description" content="6つの質問に答えるだけで、あなたの組織の導入段階・適したMCのタイプ・次のステップを無料診断します。">
+  <meta property="og:description" content="7つの質問に答えるだけで、あなたの組織の導入段階・適したMCのタイプ・次のステップを無料診断します。">
   <meta property="og:url" content="https://mc-practitioner.netlify.app/diagnosis.html">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:image" content="https://mc-practitioner.netlify.app/ogp.png">
+  <meta property="og:image" content="https://mc-practitioner.netlify.app/ogp.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +49,7 @@
     "isAccessibleForFree": true,
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
     "provider": { "@type": "ProfessionalService", "name": "マイクロクレデンシャル・プラクティショナー" },
-    "description": "6つの質問に答えるだけで、大学・専門学校・企業の組織が今どの導入段階にあり、どのようなマイクロクレデンシャル（在学生向け/企業連携型/社会人リスキリング型）が適しているか、次に必要な支援ステップを無料で診断するツールです。"
+    "description": "7つの質問に答えるだけで、大学・専門学校・企業の組織が今どの導入段階にあり、どのようなマイクロクレデンシャル（在学生向け/企業連携型/社会人リスキリング型）が適しているか、次に必要な支援ステップを無料で診断するツールです。"
   }
   </script>
   <script type="application/ld+json">
@@ -62,7 +62,7 @@
         "name": "マイクロクレデンシャル導入診断とはどのようなツールですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "6つの質問への回答から、貴組織が導入・実装・定着拡大のどの段階にあるか、在学生向け・企業連携型・社会人リスキリング型のどのタイプのマイクロクレデンシャルが適しているか、次に必要な具体的ステップを無料で分析するセルフ診断ツールです。"
+          "text": "7つの質問への回答から、貴組織が導入・実装・定着拡大のどの段階にあるか、在学生向け・企業連携型・社会人リスキリング型のどのタイプのマイクロクレデンシャルが適しているか、次に必要な具体的ステップを無料で分析するセルフ診断ツールです。"
         }
       },
       {
@@ -99,62 +99,72 @@
     <div class="wrap article-wrap">
       <p class="article-back"><a href="index.html">← トップに戻る</a></p>
       <h1 class="article-title">マイクロクレデンシャル導入診断</h1>
-      <p class="section-lede">6つの質問に答えるだけで、あなたの組織に今おすすめの進め方を無料診断します。回答内容をもとに、今の段階・適したMCのタイプ・次に必要なステップを詳しく分析します。（所要時間：約1分）</p>
+      <p class="section-lede">7つの質問に答えるだけで、あなたの組織に今おすすめの進め方を無料診断します。回答内容をもとに、今の段階・適したMCのタイプ・次に必要なステップを詳しく分析します。（所要時間：約1分）</p>
 
       <form id="diag-form" class="diag-form">
-        <fieldset class="diag-q">
-          <legend>Q1. マイクロクレデンシャル（MC）をご存知ですか？</legend>
+        <div class="diag-q" role="group" aria-labelledby="q1-legend">
+          <p class="diag-q-legend" id="q1-legend">Q1. マイクロクレデンシャル（MC）をご存知ですか？</p>
           <label><input type="radio" name="q1" value="know" required> よく知っている</label>
           <label><input type="radio" name="q1" value="heard"> 名前は聞いたことがある程度</label>
           <label><input type="radio" name="q1" value="new"> 今回初めて知った</label>
-        </fieldset>
+        </div>
 
-        <fieldset class="diag-q">
-          <legend>Q2. あなたにとって、MCのメリットは何ですか？（複数選択可）</legend>
+        <div class="diag-q" role="group" aria-labelledby="q-affiliation-legend">
+          <p class="diag-q-legend" id="q-affiliation-legend">Q2. ご所属はどれに当たりますか？</p>
+          <label><input type="radio" name="affiliation" value="university" required> 大学・短大</label>
+          <label><input type="radio" name="affiliation" value="kosen"> 高等専門学校</label>
+          <label><input type="radio" name="affiliation" value="vocational"> 専門学校・専修学校</label>
+          <label><input type="radio" name="affiliation" value="company_edu"> 企業（教育関係）</label>
+          <label><input type="radio" name="affiliation" value="company_other"> 企業（上記以外）</label>
+          <label><input type="radio" name="affiliation" value="other"> その他</label>
+        </div>
+
+        <div class="diag-q" role="group" aria-labelledby="q2-legend">
+          <p class="diag-q-legend" id="q2-legend">Q3. あなたにとって、MCのメリットは何ですか？（複数選択可）</p>
           <label><input type="checkbox" name="q2" value="reskilling"> リスキリング・社会人向け教育の充実</label>
           <label><input type="checkbox" name="q2" value="acquisition"> 学生・受講者の新規獲得</label>
           <label><input type="checkbox" name="q2" value="hiring"> スキルベース採用・人材の可視化</label>
           <label><input type="checkbox" name="q2" value="branding"> 国際化・ブランディング</label>
           <label><input type="checkbox" name="q2" value="partnership"> 産学連携の強化</label>
           <label><input type="checkbox" name="q2" value="subsidy"> 補助金・助成金の活用</label>
-        </fieldset>
+          <label><input type="checkbox" name="q2" value="unclear"> 特にない・まだよくわからない</label>
+        </div>
 
-        <fieldset class="diag-q">
-          <legend>Q3. あなたにとって、MC導入の一番の壁は何ですか？（複数選択可）</legend>
+        <div class="diag-q" role="group" aria-labelledby="q3-legend">
+          <p class="diag-q-legend" id="q3-legend">Q4. あなたにとって、MC導入の一番の壁は何ですか？（複数選択可）</p>
           <label><input type="checkbox" name="q3" value="start"> 何から始めればいいかわからない</label>
           <label><input type="checkbox" name="q3" value="consensus"> 組織内の合意形成が進まない</label>
           <label><input type="checkbox" name="q3" value="quality"> 質保証の設計方法がわからない</label>
           <label><input type="checkbox" name="q3" value="certificate"> 証明書の設計方法がわからない</label>
           <label><input type="checkbox" name="q3" value="budget"> 予算が足りない</label>
           <label><input type="checkbox" name="q3" value="manpower"> 人手が足りない</label>
-          <label><input type="checkbox" name="q3" value="retention"> 定着・継続の方法がわからない</label>
-        </fieldset>
+        </div>
 
-        <fieldset class="diag-q">
-          <legend>Q4. 既に、MCにしたいプログラムはありますか？</legend>
+        <div class="diag-q" role="group" aria-labelledby="q4-legend">
+          <p class="diag-q-legend" id="q4-legend">Q5. 既に、MCにしたいプログラムはありますか？</p>
           <label><input type="radio" name="q4" value="fixed" required> 具体的に決まっている</label>
           <label><input type="radio" name="q4" value="candidate"> 候補はあるが未定</label>
           <label><input type="radio" name="q4" value="none"> まだ何も決まっていない</label>
-        </fieldset>
+        </div>
 
-        <fieldset class="diag-q">
-          <legend>Q5. MCを受講する対象者は誰ですか？</legend>
+        <div class="diag-q" role="group" aria-labelledby="q5-legend">
+          <p class="diag-q-legend" id="q5-legend">Q6. MCを受講する対象者は誰ですか？</p>
           <label><input type="radio" name="q5" value="student" required> 在学生</label>
           <label><input type="radio" name="q5" value="reskill"> 在職社会人・求職者（リスキリング）</label>
           <label><input type="radio" name="q5" value="senior"> 主婦・シニア等（学び直し）</label>
           <label><input type="radio" name="q5" value="employee"> 自社の社員</label>
           <label><input type="radio" name="q5" value="undecided"> まだ未定</label>
-        </fieldset>
+        </div>
 
-        <fieldset class="diag-q">
-          <legend>Q6. MCについて企業と連携しますか？</legend>
+        <div class="diag-q" role="group" aria-labelledby="q6-legend">
+          <p class="diag-q-legend" id="q6-legend">Q7. MCについて企業と連携しますか？</p>
           <label><input type="radio" name="q6" value="doing" required> 既に連携予定・検討中</label>
           <label><input type="radio" name="q6" value="future"> 将来的に検討したい</label>
           <label><input type="radio" name="q6" value="no"> 特に考えていない</label>
-        </fieldset>
+        </div>
 
         <div class="diag-submit">
-          <button type="submit" class="btn-primary">診断する</button>
+          <button type="submit" class="btn-primary">AIによる診断結果をすぐ見てみる</button>
         </div>
       </form>
 
@@ -181,7 +191,7 @@
         <p class="diag-disclaimer">本診断はAIによる一次分析であり、実際の制度設計にあたっては専門家によるレビュー・最終判断が必要です。より詳しい状況を踏まえた具体的なご提案をご希望の場合は、下記より無料相談をご利用ください。</p>
 
         <div class="pricing-cta">
-          <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSd5oUOj8Ck8wE3Hwj7ufdpu-jSB_62y5FVG2VPsJdA2GsGpLA/viewform?usp=header" target="_blank" rel="noopener">まずは無料で相談してみる</a>
+          <a class="btn-primary" href="index.html#contact">お問い合わせ</a>
           <p class="diag-retry"><a href="#" id="diag-reset">もう一度診断する</a></p>
         </div>
       </div>
@@ -189,7 +199,7 @@
       <h2 class="diag-subhead" style="margin-top:56px;">診断についてのよくある質問</h2>
       <div class="faq-item">
         <p class="faq-q"><span class="q-mark">Q</span>マイクロクレデンシャル導入診断とはどのようなツールですか？</p>
-        <p class="faq-a">6つの質問への回答から、貴組織が導入・実装・定着拡大のどの段階にあるか、在学生向け・企業連携型・社会人リスキリング型のどのタイプのマイクロクレデンシャルが適しているか、次に必要な具体的ステップを無料で分析するセルフ診断ツールです。</p>
+        <p class="faq-a">7つの質問への回答から、貴組織が導入・実装・定着拡大のどの段階にあるか、在学生向け・企業連携型・社会人リスキリング型のどのタイプのマイクロクレデンシャルが適しているか、次に必要な具体的ステップを無料で分析するセルフ診断ツールです。</p>
       </div>
       <div class="faq-item">
         <p class="faq-q"><span class="q-mark">Q</span>診断結果はそのまま信頼してよいですか？</p>
@@ -225,15 +235,17 @@
 
       var LABELS = {
         q1: { know: 'よく知っている', heard: '名前は聞いたことがある程度', new: '今回初めて知った' },
+        affiliation: { university: '大学・短大', kosen: '高等専門学校', vocational: '専門学校・専修学校', company_edu: '企業（教育関係）', company_other: '企業（上記以外）', other: 'その他' },
         q2: {
           reskilling: 'リスキリング・社会人向け教育の充実', acquisition: '学生・受講者の新規獲得',
           hiring: 'スキルベース採用・人材の可視化', branding: '国際化・ブランディング',
-          partnership: '産学連携の強化', subsidy: '補助金・助成金の活用'
+          partnership: '産学連携の強化', subsidy: '補助金・助成金の活用',
+          unclear: '特にない・まだよくわからない'
         },
         q3: {
           start: '何から始めればいいかわからない', consensus: '組織内の合意形成が進まない',
           quality: '質保証の設計方法がわからない', certificate: '証明書の設計方法がわからない',
-          budget: '予算が足りない', manpower: '人手が足りない', retention: '定着・継続の方法がわからない'
+          budget: '予算が足りない', manpower: '人手が足りない'
         },
         q4: { fixed: '具体的に決まっている', candidate: '候補はあるが未定', none: 'まだ何も決まっていない' },
         q5: {
@@ -257,25 +269,25 @@
         retention: {
           badge: '定着・拡大フェーズ',
           title: '「定着・拡大フェーズ」の支援が適しています',
-          body: '導入後の運用に課題を感じているようです。効果検証・広報・補助金申請など、定着と展開を重点的にサポートします。'
+          body: '導入後の運用に課題を感じているようです。効果検証・補助金申請など、定着と展開を重点的にサポートします。'
         }
       };
 
       var PATTERNS = {
         A: {
           badge: 'パターンA：在学生向けMC',
-          desc: '在学生向けに、正課・準正課プログラムを通じて学修成果を可視化するタイプです。学生のキャリア形成支援や、大学等の特色化・ブランディングに活かしやすい方向性です。',
+          desc: '在学生向けに、正規・非正規プログラムを通じて学修成果を可視化するタイプです。学生のキャリア形成支援や、大学等の特色化・ブランディングに活かしやすい方向性です。',
           barriers: ['教務規程・単位認定制度との整合', '既存カリキュラムとの接続・すみ分け', '学内（教務・キャリアセンター等）での合意形成']
         },
         B: {
           badge: 'パターンB：企業連携型MC',
           desc: '自社の社員研修として、または企業と連携したプログラムを通じて、実務スキルの証明を採用・人材育成に直結させるタイプです。人材育成部門・事業部門など「学ぶ側」と「活用する側」、あるいは連携先企業と教育機関側のリソース・カリキュラムをどう橋渡しするかが鍵になります。',
-          barriers: ['社内関係部署（または連携先企業）との役割・費用分担の整理', '関係者間でのブランディング・広報方針のすり合わせ', '取り組みを継続させるための体制づくり']
+          barriers: ['社内関係部署（または連携先企業）との役割・費用分担の整理', '評価基準・証明書（デジタルバッジ等）フォーマットのすり合わせ', '取り組みを継続させるための体制づくり']
         },
         C: {
           badge: 'パターンC：社会人リスキリング型MC',
-          desc: '在職社会人・求職者・学び直し層など、非学位型のプログラムで学ぶ人向けのタイプです。集客力と、修了要件・評価基準の明確さが成果を左右します。',
-          barriers: ['受講者の集客・広報チャネルの確保', '評価基準・修了要件の明確化', '受講継続のための動機付け設計']
+          desc: '在職社会人・求職者・学び直し層など、非学位型のプログラムで学ぶ人向けのタイプです。修了要件・評価基準の明確さが成果を左右します。',
+          barriers: ['評価基準・修了要件の明確化', '受講継続のための動機付け設計']
         },
         undecided: {
           badge: '対象者：検討中',
@@ -288,7 +300,7 @@
         intro: {
           A: ['学内の関係部署（教務・キャリアセンター等）への説明資料の作成', '対象プログラムの候補選定とMC化の目的整理', '学生・教職員向けの理解増進の場づくり'],
           B: ['社内関係部署、または連携候補企業へのヒアリング・意向確認', '目的とMC化するプログラム範囲の整理', '社内外への説明資料の作成'],
-          C: ['受講対象者（在職者・求職者・学び直し層等）の明確化', 'MC化するプログラム候補の選定', '想定する集客チャネルの整理'],
+          C: ['受講対象者（在職者・求職者・学び直し層等）の明確化', 'MC化するプログラム候補の選定', '想定する修了要件・評価基準の方向性の整理'],
           undecided: ['「誰のためのMCか」を整理する簡易ワークショップ', 'パターン別（在学生／企業連携／社会人リスキリング）の比較検討', 'MC化の目的（採用力強化か、収益化か等）の言語化']
         },
         implement: {
@@ -298,9 +310,9 @@
           undecided: ['対象者を仮決めした上での記述子ドラフト作成', '複数パターンを想定した評価基準の比較検討', '早期に専門家レビューを受けて方向性を固める']
         },
         retention: {
-          A: ['学生への周知・活用実績の可視化', '他プログラムへの展開検討', '大学案内・広報物への反映'],
+          A: ['学生への周知・活用実績の可視化', '他プログラムへの展開検討', '取得実績データの整理・分析（次年度以降の改善に活用）'],
           B: ['社内経営層、または連携企業への成果報告と次年度以降の継続提案', '採用・人材育成での活用実績の可視化', '対象範囲（他部門・他企業）の拡大検討'],
-          C: ['受講者アンケート等をもとにした内容改善', '広報・集客チャネルの拡大', '補助金・助成金の活用検討'],
+          C: ['受講者アンケート等をもとにした内容改善', '受講継続率・修了率の分析と改善', '補助金・助成金の活用検討'],
           undecided: ['対象者・パターンを明確化した上での定着施策の再設計', '既存の運用実績の棚卸し', '専門家レビューによる継続方針の確認']
         }
       };
@@ -314,11 +326,14 @@
         return list.join('、');
       }
 
-      function determinePattern(q5, q6) {
+      function determinePattern(q5, q6, affiliation) {
         if (q5 === 'student') return 'A';
         if (q5 === 'employee') return 'B';
         if (q5 === 'reskill' || q5 === 'senior') return 'C';
         if (q6 === 'doing') return 'B';
+        // 対象者が「まだ未定」などで判断できない場合は、ご所属を手がかりに推定する
+        if (affiliation === 'university' || affiliation === 'kosen' || affiliation === 'vocational') return 'A';
+        if (affiliation === 'company_edu' || affiliation === 'company_other') return 'B';
         return 'undecided';
       }
 
@@ -334,7 +349,6 @@
         if (q3.indexOf('manpower') !== -1) score.intro += 1;
         if (q3.indexOf('quality') !== -1) score.implement += 2;
         if (q3.indexOf('certificate') !== -1) score.implement += 2;
-        if (q3.indexOf('retention') !== -1) score.retention += 2;
 
         if (q4 === 'none') score.intro += 2;
         if (q4 === 'candidate') score.implement += 1;
@@ -350,6 +364,7 @@
         e.preventDefault();
         var data = new FormData(form);
         var q1 = data.get('q1');
+        var affiliation = data.get('affiliation');
         var q2 = data.getAll('q2');
         var q3 = data.getAll('q3');
         var q4 = data.get('q4');
@@ -357,7 +372,7 @@
         var q6 = data.get('q6');
 
         var phaseKey = determinePhase(q1, q3, q4);
-        var patternKey = determinePattern(q5, q6);
+        var patternKey = determinePattern(q5, q6, affiliation);
         var phase = PHASES[phaseKey];
         var pattern = PATTERNS[patternKey];
 
@@ -371,7 +386,7 @@
         var q2Labels = labelsFor('q2', q2);
         var q3Labels = labelsFor('q3', q3);
         var summaryParts = [];
-        summaryParts.push('MCについては「' + LABELS.q1[q1] + '」とのことで、対象者は「' + LABELS.q5[q5] + '」、企業との連携については「' + LABELS.q6[q6] + '」というご状況でした。');
+        summaryParts.push('ご所属は「' + LABELS.affiliation[affiliation] + '」、MCについては「' + LABELS.q1[q1] + '」とのことで、対象者は「' + LABELS.q5[q5] + '」、企業との連携については「' + LABELS.q6[q6] + '」というご状況でした。');
         if (q2Labels.length) {
           summaryParts.push('重視されているメリットは' + joinJa(q2Labels) + 'とのことです。');
         }
@@ -386,6 +401,11 @@
           patternDesc.textContent += '　また、既に企業との連携を予定・検討中とのことですので、' + pattern.badge + 'の設計に加えて、企業連携の要素（役割分担・費用・ブランディング調整）もあわせて検討する必要があります。';
         } else if (patternKey !== 'B' && q6 === 'future') {
           patternDesc.textContent += '　将来的に企業連携も検討したいとのことですので、後から連携を組み込みやすい設計（記述子や評価基準を過度に自校特化させない等）にしておくと安心です。';
+        }
+
+        // ご所属の補足（教育関係企業は、企業視点と教育機関視点の両方が関わりやすいため補足）
+        if (affiliation === 'company_edu') {
+          patternDesc.textContent += '　また、教育関係の企業様は、提供者・実施主体の両方の立場に関わるケースが多いため、' + (patternKey === 'A' ? '在学生向けMC（パターンA）の質保証設計の観点' : '企業連携型MC（パターンB）の役割分担の観点') + 'に加えて、教育機関側の質保証・認証の要件も並行して押さえておくと安心です。';
         }
 
         // 想定される壁：本人が選んだ壁を先に、選ばれていないパターン特有の壁を後に
