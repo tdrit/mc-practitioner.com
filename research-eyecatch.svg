@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3EEF1"/>
+      <stop offset="55%" stop-color="#C9B7C6"/>
+      <stop offset="100%" stop-color="#8F7A8C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#rg)"/>
+
+  <!-- research network motif: nodes connected by lines -->
+  <g stroke="#FFFFFF" stroke-width="2.5" opacity="0.75">
+    <line x1="210" y1="470" x2="420" y2="330"/>
+    <line x1="420" y1="330" x2="630" y2="400"/>
+    <line x1="420" y1="330" x2="470" y2="180"/>
+    <line x1="630" y1="400" x2="820" y2="260"/>
+    <line x1="630" y1="400" x2="760" y2="520"/>
+    <line x1="820" y1="260" x2="1000" y2="200"/>
+    <line x1="820" y1="260" x2="960" y2="400"/>
+  </g>
+  <g fill="#FFFFFF">
+    <circle cx="210" cy="470" r="9" opacity="0.9"/>
+    <circle cx="420" cy="330" r="13" opacity="0.95"/>
+    <circle cx="470" cy="180" r="7" opacity="0.8"/>
+    <circle cx="630" cy="400" r="16" opacity="1"/>
+    <circle cx="760" cy="520" r="8" opacity="0.8"/>
+    <circle cx="820" cy="260" r="11" opacity="0.9"/>
+    <circle cx="1000" cy="200" r="7" opacity="0.8"/>
+    <circle cx="960" cy="400" r="9" opacity="0.85"/>
+  </g>
+
+  <!-- hexagon logo motif, echoed faintly -->
+  <g opacity="0.5" transform="translate(940,470)">
+    <polygon points="0,-90 78,-45 78,45 0,90 -78,45 -78,-45" fill="#FFFFFF" opacity="0.18"/>
+    <polygon points="0,-40 52,-5 0,30 -52,-5" fill="#FFFFFF" opacity="0.55"/>
+    <polygon points="0,10 34,32 0,54 -34,32" fill="#FFFFFF" opacity="0.4"/>
+  </g>
+</svg>
