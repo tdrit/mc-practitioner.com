@@ -33,7 +33,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Zen Maru Gothic", "BIZ UDPGothic", "Yu Gothic UI", "Yu Gothic Medium", "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: "Zen Kaku Gothic New", "BIZ UDPGothic", "Yu Gothic UI", "Yu Gothic Medium", "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.85;
@@ -135,7 +135,7 @@ img, svg { max-width: 100%; }
   display: inline-block; padding: 5px 14px; border-radius: 3px;
 }
 .hero h1 {
-  font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "BIZ UDPGothic", "BIZ UDGothic", "Yu Gothic UI", sans-serif;
+  font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", "BIZ UDGothic", "Yu Gothic UI", sans-serif;
   font-size: clamp(30px, 4.6vw, 44px); line-height: 1.5;
   margin: 0 0 20px; font-weight: 700; text-wrap: balance; color: var(--navy-deep);
   word-break: keep-all; overflow-wrap: break-word;
