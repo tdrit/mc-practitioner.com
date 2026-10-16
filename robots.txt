@@ -24,4 +24,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://mc-practitioner.netlify.app/sitemap.xml
+Sitemap: https://rmc-lab.jp/sitemap.xml
