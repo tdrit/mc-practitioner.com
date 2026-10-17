@@ -133,6 +133,23 @@ img, svg { max-width: 100%; }
   width: 380px; max-width: 50vw; height: auto; opacity: 0.25; pointer-events: none; z-index: 0;
 }
 @media (max-width: 640px) { .hero-logo-deco { opacity: 0.16; width: 260px; } }
+/* sunrise glow over the top-page photo (index.html only) */
+.hero-sun {
+  --sun-x: 11%; --sun-y: 49%;
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(circle at var(--sun-x) var(--sun-y), rgba(255,244,214,1) 0, rgba(255,222,160,0.95) 1.6%, rgba(255,186,124,0.55) 4.5%, rgba(255,160,140,0.22) 13%, rgba(255,160,140,0) 30%),
+    radial-gradient(ellipse 2.6% 20% at var(--sun-x) calc(var(--sun-y) + 17%), rgba(255,212,160,0.5) 0, rgba(255,212,160,0) 100%),
+    radial-gradient(ellipse 55% 7% at var(--sun-x) calc(var(--sun-y) + 1%), rgba(255,200,150,0.45) 0, rgba(255,200,150,0) 100%);
+  mix-blend-mode: screen;
+  animation: hero-sunrise 3.2s ease-out both;
+}
+@media (max-width: 640px) { .hero-sun { --sun-x: 78%; --sun-y: 47%; } }
+@keyframes hero-sunrise {
+  from { opacity: 0; transform: translateY(5%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) { .hero-sun { animation: none; } }
 .hero .wrap { display: flex; justify-content: center; }
 .hero-content {
   position: relative; z-index: 1; max-width: 860px; width: 100%;
