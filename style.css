@@ -167,14 +167,14 @@ img, svg { max-width: 100%; }
 .band { height: 14px; background: var(--teal); }
 
 /* ---- sections ---- */
-.section { padding: 72px 0; scroll-margin-top: 84px; }
+.section { padding: 52px 0; scroll-margin-top: 84px; }
 #top { scroll-margin-top: 0; }
 .section.alt { background: var(--paper-alt); }
 .section h2 {
   font-size: clamp(26px, 3.6vw, 32px); margin: 0 0 10px; font-weight: 800; color: var(--navy);
 }
 .section .section-lede {
-  color: var(--ink-soft); font-size: 18px; margin: 0 0 36px; max-width: 62ch; font-weight: 600;
+  color: var(--ink-soft); font-size: 18px; margin: 0 0 28px; max-width: 62ch; font-weight: 600;
   word-break: keep-all; overflow-wrap: break-word; text-wrap: balance;
 }
 
@@ -445,12 +445,13 @@ table.price td.amount { font-variant-numeric: tabular-nums; white-space: nowrap;
 .contact-box p { color: rgba(255,255,255,0.9); font-size: 17.5px; margin: 0 0 26px; font-weight: 500; }
 .contact-box .btn-primary { font-size: 17px; padding: 16px 36px; }
 .contact-note { font-size: 13.5px; color: rgba(255,255,255,0.75); margin-top: 20px; }
-.contact-form { max-width: 620px; margin: 40px auto 0; }
+.contact-form { max-width: 620px; margin: 28px auto 0; }
 .contact-field {
   display: block; font-size: 15.5px; font-weight: 700; color: var(--ink);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .contact-field:last-child { margin-bottom: 0; }
+.diag-q .contact-field { padding: 4px; }
 .contact-field .req {
   font-size: 15.5px; font-weight: 700; color: #b0432f; margin-left: 4px;
   vertical-align: middle;
