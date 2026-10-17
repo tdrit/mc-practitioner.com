@@ -422,6 +422,17 @@ table.price td.amount { font-variant-numeric: tabular-nums; white-space: nowrap;
 .flow-item p { font-size: 15.5px; color: var(--ink-soft); margin: 0; font-weight: 500; }
 .flow-footnote { font-size: 13.5px; color: var(--ink-soft); margin-top: 28px; }
 
+/* greeting (top page) */
+.greeting-body { max-width: 40em; }
+.greeting-body p { font-size: 16.5px; line-height: 2; color: var(--ink); font-weight: 500; margin: 0 0 1.4em; }
+.greeting-rmc { margin: 0 0 1.6em; padding: 18px 22px; border-left: 4px solid var(--teal); background: var(--paper); border-radius: 0 8px 8px 0; display: grid; gap: 8px; }
+.greeting-rmc > div { display: flex; align-items: baseline; gap: 16px; }
+.greeting-rmc dt { font-size: 26px; font-weight: 800; color: var(--navy); width: 1.2em; line-height: 1.2; }
+.greeting-rmc dd { margin: 0; font-size: 16.5px; color: var(--ink); font-weight: 600; }
+.greeting-rmc dd span { font-weight: 800; color: var(--navy); }
+.greeting-body p.greeting-sign { text-align: right; margin: 2em 0 0; font-size: 15px; color: var(--ink-soft); }
+.greeting-sign-name { display: block; font-size: 19px; font-weight: 800; color: var(--navy); margin-top: 4px; letter-spacing: 0.08em; }
+
 /* profile */
 .profile-body { max-width: 68ch; font-size: 16.5px; color: var(--ink); font-weight: 500; }
 .profile-body strong { color: var(--navy); }
