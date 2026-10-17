@@ -189,10 +189,9 @@
         <h3 class="diag-subhead">次のステップ</h3>
         <ul id="diag-points" class="diag-points"></ul>
 
-        <p class="diag-disclaimer">本診断はAIによる一次分析であり、実際の制度設計にあたっては専門家によるレビュー・最終判断が必要です。より詳しい状況を踏まえた具体的なご提案をご希望の場合は、下記より無料相談をご利用ください。</p>
+        <p class="diag-disclaimer">本診断はAIによる一次分析であり、実際の制度設計にあたっては専門家によるレビュー・最終判断が必要です。</p>
 
         <div class="pricing-cta">
-          <a class="btn-primary" href="/business/#contact">お問い合わせ</a>
           <p class="diag-retry"><a href="#" id="diag-reset">もう一度診断する</a></p>
         </div>
       </div>
@@ -260,17 +259,17 @@
         intro: {
           badge: '導入フェーズ',
           title: 'まずは「導入フェーズ」から始めましょう',
-          body: '組織内の理解増進や、MC化するプログラムの検討・制度設計の土台づくりからご一緒できます。焦らず、一歩目から伴走します。'
+          body: '組織内の理解増進や、MC化するプログラムの検討など、制度設計の土台づくりから始める段階です。焦らず、一歩ずつ進めていきましょう。'
         },
         implement: {
           badge: '実装フェーズ',
-          title: '「実装フェーズ」の支援が適しています',
-          body: '対象プログラムの方向性は見えてきているので、質保証設計・証明書設計・規定整備など、具体的な制度設計を重点的にサポートします。'
+          title: '「実装フェーズ」の段階です',
+          body: '対象プログラムの方向性が見えてきている段階です。質保証設計・証明書設計・規定整備など、具体的な制度設計に取り組むタイミングです。'
         },
         retention: {
           badge: '定着・拡大フェーズ',
-          title: '「定着・拡大フェーズ」の支援が適しています',
-          body: '導入後の運用に課題を感じているようです。効果検証・補助金申請など、定着と展開を重点的にサポートします。'
+          title: '「定着・拡大フェーズ」の段階です',
+          body: '導入後の運用に課題を感じている段階のようです。効果検証や補助金の活用など、定着と展開に取り組むタイミングです。'
         }
       };
 
@@ -429,6 +428,10 @@
           li.textContent = t;
           points.appendChild(li);
         });
+        var contactLi = document.createElement('li');
+        contactLi.className = 'diag-contact-note';
+        contactLi.innerHTML = '伴走支援が必要なときは、<a href="/business/#contact">お気軽にお問い合わせください</a>。';
+        points.appendChild(contactLi);
 
         form.hidden = true;
         result.hidden = false;
