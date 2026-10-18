@@ -133,6 +133,17 @@ img, svg { max-width: 100%; }
   width: 380px; max-width: 50vw; height: auto; opacity: 0.25; pointer-events: none; z-index: 0;
 }
 @media (max-width: 640px) { .hero-logo-deco { opacity: 0.16; width: 260px; } }
+/* dawn palette (top page only): lavender sky -> peach horizon -> periwinkle water */
+.hero-dawn .hero-overlay {
+  background: linear-gradient(to bottom,
+    rgba(104,132,216,0.46) 0%,
+    rgba(140,170,232,0.32) 28%,
+    rgba(200,214,242,0.20) 40%,
+    rgba(250,196,170,0.50) 49%,
+    rgba(244,184,196,0.30) 56%,
+    rgba(150,162,224,0.30) 72%,
+    rgba(92,104,176,0.44) 100%);
+}
 /* sunrise glow over the top-page photo (index.html only) */
 .hero-sun {
   --sun-x: 11%; --sun-y: 49%;
