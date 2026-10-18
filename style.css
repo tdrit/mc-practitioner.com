@@ -136,13 +136,6 @@ img, svg { max-width: 100%; }
 /* top hero: break only between phrases, never inside them */
 .hero .nw { white-space: nowrap; }
 .hero.hero-dawn h1 { text-wrap: wrap; font-size: clamp(26px, 3.6vw, 40px); }
-/* small solid triangle between words, as on the business card */
-.hero .tri {
-  display: inline-block; width: 0.42em; height: 0.56em; margin: 0 0.42em 0 0.46em;
-  vertical-align: 0.06em;
-  background: linear-gradient(180deg, #B69CB4 0%, #8F7A8C 100%);
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
-}
 .hero.hero-dawn p.lede { max-width: none; text-wrap: wrap; }
 /* dawn palette (top page only): lavender sky -> peach horizon -> periwinkle water */
 .hero-dawn .hero-overlay {
