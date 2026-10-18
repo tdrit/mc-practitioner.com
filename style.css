@@ -142,7 +142,7 @@ img, svg { max-width: 100%; }
 /* hero card text colors (card is always light): plum-black title, deep plum lede, mauve label */
 .hero.hero-dawn h1 { color: #2B2333; }
 .hero.hero-dawn p.lede { color: #50607E; }
-.hero.hero-dawn .eyebrow { color: #7A6378; }
+.hero.hero-dawn .eyebrow { color: #7A6378; background: #DCE4F0; }
 @media (max-width: 640px) { .hero.hero-dawn .hero-content { text-align: center; padding: 26px 18px; } .hero.hero-dawn .eyebrow { font-size: 12px; letter-spacing: 0.04em; padding: 5px 10px; } .hero.hero-dawn h1 { font-size: clamp(28px, 8.6vw, 40px); } .hero-about { font-size: clamp(11.5px, 3.35vw, 13.5px); line-break: strict; letter-spacing: 0; } .hero-about .nw { display: block; white-space: normal; } }
 /* dawn palette (top page only): lavender sky -> peach horizon -> periwinkle water */
 .hero-dawn .hero-overlay {
