@@ -206,9 +206,10 @@ img, svg { max-width: 100%; }
 .section h2 {
   font-size: clamp(26px, 3.6vw, 32px); margin: 0 0 10px; font-weight: 800; color: var(--navy);
 }
+.section-lede .nw { white-space: nowrap; }
 .section .section-lede {
-  color: var(--ink-soft); font-size: 18px; margin: 0 0 28px; max-width: 62ch; font-weight: 600;
-  word-break: keep-all; overflow-wrap: break-word; text-wrap: balance;
+  color: var(--ink-soft); font-size: 18px; margin: 0 0 28px; max-width: 40em; font-weight: 600;
+  word-break: normal; line-break: strict; overflow-wrap: break-word; text-wrap: pretty;
 }
 
 /* voice quote */
