@@ -474,10 +474,10 @@ table.price td.amount { font-variant-numeric: tabular-nums; white-space: nowrap;
 .profile-name { font-size: 18.5px; font-weight: 800; margin: 0 0 16px; color: var(--navy); }
 .profile-row { display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start; }
 .profile-photo {
-  width: 200px; max-width: 100%; height: auto; aspect-ratio: 4 / 5; border-radius: 10px; object-fit: cover; flex-shrink: 0;
+  width: 170px; max-width: 100%; height: auto; aspect-ratio: 3 / 4; border-radius: 10px; object-fit: cover; flex-shrink: 0;
   box-shadow: 0 6px 20px rgba(20,39,63,0.14);
 }
-@media (max-width: 600px) { .profile-photo { width: 60%; max-width: 240px; } }
+@media (max-width: 600px) { .profile-photo { width: 50%; max-width: 200px; } }
 .profile-text { flex: 1; min-width: 240px; }
 
 /* section heading icon (diamond motif, echoes the logo mark) */
