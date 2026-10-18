@@ -135,7 +135,7 @@ img, svg { max-width: 100%; }
 @media (max-width: 640px) { .hero-logo-deco { opacity: 0.16; width: 260px; } }
 /* top hero: break only between phrases, never inside them */
 .hero .nw { white-space: nowrap; }
-.hero.hero-dawn h1 { text-wrap: wrap; font-family: "Ephesis", "Segoe Script", "Brush Script MT", cursive; font-weight: 400; font-size: clamp(42px, 6.6vw, 72px); line-height: 1.2; letter-spacing: 0; }
+.hero.hero-dawn h1 { text-wrap: wrap; font-family: "Corinthia", "Segoe Script", "Brush Script MT", cursive; font-weight: 700; font-size: clamp(46px, 7.4vw, 82px); line-height: 1.1; letter-spacing: 0; }
 .hero.hero-dawn p.lede { max-width: none; text-wrap: wrap; }
 /* dawn palette (top page only): lavender sky -> peach horizon -> periwinkle water */
 .hero-dawn .hero-overlay {
