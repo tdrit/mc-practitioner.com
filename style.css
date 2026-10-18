@@ -462,6 +462,11 @@ table.price td.amount { font-variant-numeric: tabular-nums; white-space: nowrap;
 /* member sign-up (top page) */
 .contact-form.member-form { margin: 24px 0 0; max-width: 560px; }
 .member-form .diag-submit { text-align: left; }
+.member-interests { margin-top: 6px; }
+.member-interests-label { font-size: 15.5px; font-weight: 700; color: var(--ink); margin: 0 0 4px; padding: 0 4px; }
+.member-interests-note { font-weight: 500; font-size: 13.5px; color: var(--ink-soft); margin-left: 4px; }
+.member-interests label { display: flex; align-items: flex-start; gap: 10px; padding: 6px 4px; font-size: 15.5px; cursor: pointer; }
+.member-interests input { margin: 0.3em 0 0; width: 18px; height: 18px; flex-shrink: 0; accent-color: var(--teal-deep); }
 .member-privacy { font-size: 13.5px; color: var(--ink-soft); margin: 0; }
 .member-privacy a { color: var(--teal-deep); }
 .member-error { font-size: 14px; color: #b0432f; margin: 0; font-weight: 700; }
