@@ -159,6 +159,47 @@
     <div class="wrap">
       <h2><span class="section-icon" aria-hidden="true"></span>メンバーになる</h2>
       <p class="section-lede">メンバーに登録いただいた方には、各種ご案内を差し上げます。</p>
+      <form id="member-form" name="rmc-member" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="diag-form contact-form member-form">
+        <input type="hidden" name="form-name" value="rmc-member">
+        <p hidden><label>この項目は入力しないでください<input name="bot-field"></label></p>
+        <fieldset class="diag-q">
+          <legend>メンバー登録フォーム</legend>
+          <label class="contact-field" for="member-name">お名前<span class="req">*</span><input type="text" id="member-name" name="name" autocomplete="name" required></label>
+          <label class="contact-field" for="member-email">メールアドレス<span class="req">*</span><input type="email" id="member-email" name="email" autocomplete="email" required></label>
+          <label class="contact-field" for="member-org">ご所属<input type="text" id="member-org" name="organization" autocomplete="organization"></label>
+        </fieldset>
+        <p class="member-privacy">ご入力いただいた情報は、RMC Labからのご案内の目的にのみ使用いたします。詳しくは<a href="/privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+        <p class="member-error" id="member-error" role="alert" hidden>送信できませんでした。恐れ入りますが、時間をおいてもう一度お試しください。</p>
+        <div class="diag-submit">
+          <button type="submit" class="btn-primary">登録する</button>
+        </div>
+      </form>
+      <div id="member-success" class="diag-result member-success" role="region" aria-live="polite" tabindex="-1" hidden>
+        <p>ご登録ありがとうございます。今後、RMC Labから各種ご案内をお送りします。</p>
+      </div>
+      <script>
+        (function () {
+          var form = document.getElementById('member-form');
+          var success = document.getElementById('member-success');
+          var error = document.getElementById('member-error');
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            error.hidden = true;
+            fetch('/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams(new FormData(form)).toString()
+            }).then(function (res) {
+              if (!res.ok) throw new Error('HTTP ' + res.status);
+              form.hidden = true;
+              success.hidden = false;
+              success.focus();
+            }).catch(function () {
+              error.hidden = false;
+            });
+          });
+        })();
+      </script>
     </div>
   </section>
 
