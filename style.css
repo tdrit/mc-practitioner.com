@@ -149,12 +149,12 @@ img, svg { max-width: 100%; }
 @media (max-width: 640px) { .hero.hero-match .hero-content { text-align: center; padding: 26px 18px; } .hero.hero-match .hero-actions { justify-content: center; } .hero.hero-match h1 { font-size: clamp(21px, 6.2vw, 28px); } .hero.hero-match p.lede { font-size: 15px; } .hero.hero-match .pc-br { display: none; } .hero.hero-match .eyebrow { font-size: 12px; letter-spacing: 0.04em; } }
 /* dawn-flower gradient button (lavender -> sky -> peach) */
 .btn-ghost.btn-bloom {
-  background: linear-gradient(120deg, #ADA9CF 0%, #BCC6DC 45%, #DDC2BA 100%);
-  color: #3B3150; border: none; font-weight: 700;
+  background: linear-gradient(120deg, #7670A6 0%, #717EA6 48%, #9C7A78 100%);
+  color: #fff; border: none; font-weight: 700; text-shadow: 0 1px 2px rgba(60, 50, 80, 0.25);
   box-shadow: 0 4px 14px rgba(110, 100, 140, 0.20);
   transition: box-shadow .2s ease, transform .2s ease, filter .2s ease;
 }
-.btn-ghost.btn-bloom:hover { filter: brightness(1.04) saturate(1.08); box-shadow: 0 6px 18px rgba(120, 110, 180, 0.30); transform: translateY(-1px); color: #3B3150; }
+.btn-ghost.btn-bloom:hover { filter: brightness(1.04) saturate(1.08); box-shadow: 0 6px 18px rgba(120, 110, 180, 0.30); transform: translateY(-1px); color: #fff; }
 .btn-ghost.btn-bloom:focus-visible { outline: 3px solid #8C93D6; outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { .btn-ghost.btn-bloom { transition: none; } .btn-ghost.btn-bloom:hover { transform: none; } }
 /* hero card text colors (card is always light): plum-black title, deep plum lede, mauve label */
@@ -259,7 +259,7 @@ img, svg { max-width: 100%; }
 .diag-promo {
   margin-top: 28px; padding: 22px 26px; border-radius: 10px;
   background: var(--paper); border: 2px dashed var(--teal);
-  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 16px;
 }
 .diag-promo-text { margin: 0; font-size: 16px; font-weight: 700; color: var(--navy); }
 
