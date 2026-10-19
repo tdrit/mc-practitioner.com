@@ -115,6 +115,22 @@ img, svg { max-width: 100%; }
   letter-spacing: 0.02em;
 }
 .nav-cta:hover { background: var(--teal-deep); }
+/* HOME button on MCP pages (corporate mauve, matches the logo gradient) */
+.nav-home {
+  display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0;
+  margin-left: auto; margin-right: 12px;
+  padding: 6px 14px 6px 10px; border-radius: 999px; text-decoration: none;
+  background: linear-gradient(135deg, #B69CB4 0%, #8F7A8C 100%); color: #fff;
+  font-size: 12.5px; font-weight: 700; letter-spacing: 0.08em;
+  box-shadow: 0 2px 8px rgba(143, 122, 140, 0.30);
+  transition: filter .2s ease, box-shadow .2s ease;
+}
+.nav-home svg { width: 18px; height: 18px; display: block; }
+.nav-home:hover { filter: brightness(1.06); box-shadow: 0 4px 12px rgba(143, 122, 140, 0.38); }
+.nav-home:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+@media (min-width: 760px) { .site-nav-links { margin-left: auto; margin-right: 28px; } .site-nav-links + .nav-home { margin-left: 0; } }
+@media (max-width: 640px) { .nav-home { padding: 7px; margin-right: 8px; } .nav-home-label { display: none; } }
+@media (prefers-reduced-motion: reduce) { .nav-home { transition: none; } }
 
 /* ---- hero (photo background, bold overlay) ---- */
 .hero {
