@@ -135,7 +135,7 @@ img, svg { max-width: 100%; }
 @media (max-width: 640px) { .hero-logo-deco { opacity: 0.16; width: 260px; } }
 /* top hero: break only between phrases, never inside them */
 .hero .nw { white-space: nowrap; }
-.hero.hero-dawn h1 { text-wrap: wrap; font-family: "Caveat", "Segoe Print", "Comic Sans MS", cursive; font-weight: 600; font-size: clamp(36px, 5.6vw, 60px); line-height: 1.2; letter-spacing: 0; }
+.hero.hero-dawn h1 { text-wrap: wrap; font-family: "Klee One", "Segoe Print", cursive; font-weight: 600; font-size: clamp(30px, 4.6vw, 50px); line-height: 1.35; letter-spacing: 0.01em; -webkit-text-stroke: 0.035em currentColor; paint-order: stroke fill; letter-spacing: 0; }
 .hero.hero-dawn p.lede { max-width: none; text-wrap: wrap; }
 .hero.hero-dawn p.lede { margin-bottom: 14px; }
 .hero-org { padding-top: 16px; border-top: 1px solid rgba(143,122,140,0.35); }
@@ -146,7 +146,7 @@ img, svg { max-width: 100%; }
 .hero.hero-dawn h1 { color: #2B2333; }
 .hero.hero-dawn p.lede { color: #50607E; }
 .hero.hero-dawn .eyebrow { color: #7A6378; background: #DCE4F0; }
-@media (max-width: 640px) { .hero.hero-dawn .hero-content { text-align: center; padding: 26px 18px; } .hero.hero-dawn .eyebrow { font-size: 12px; letter-spacing: 0.04em; padding: 5px 10px; } .hero.hero-dawn h1 { font-size: clamp(28px, 8.6vw, 40px); } .hero-about { font-size: clamp(11.5px, 3.35vw, 13.5px); line-break: strict; letter-spacing: 0; } .hero-about .nw { display: block; white-space: normal; } }
+@media (max-width: 640px) { .hero.hero-dawn .hero-content { text-align: center; padding: 26px 18px; } .hero.hero-dawn .eyebrow { font-size: 12px; letter-spacing: 0.04em; padding: 5px 10px; } .hero.hero-dawn h1 { font-size: clamp(24px, 7.4vw, 34px); } .hero-about { font-size: clamp(11.5px, 3.35vw, 13.5px); line-break: strict; letter-spacing: 0; } .hero-about .nw { display: block; white-space: normal; } }
 /* dawn palette (top page only): lavender sky -> peach horizon -> periwinkle water */
 .hero-dawn .hero-overlay {
   background: linear-gradient(to bottom,
