@@ -141,6 +141,7 @@ img, svg { max-width: 100%; }
 .hero-org { padding-top: 16px; border-top: 1px solid rgba(143,122,140,0.35); }
 .hero-org .eyebrow { margin: 0 0 8px; }
 .hero-about { margin: 0; font-size: 15px; font-weight: 600; color: #857883; line-height: 1.8; letter-spacing: 0.02em; }
+.hero h1 .dot { font-size: 0.6em; margin-left: 0.04em; }
 /* hero card text colors (card is always light): plum-black title, deep plum lede, mauve label */
 .hero.hero-dawn h1 { color: #2B2333; }
 .hero.hero-dawn p.lede { color: #50607E; }
