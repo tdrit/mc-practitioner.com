@@ -30,6 +30,22 @@
     toggleBackToTop();
   }
 
+  // When a page opens with #section in the URL, the browser jumps before web fonts
+  // and images finish loading, so the target drifts. Re-align once layout settles.
+  if (location.hash.length > 1) {
+    var realign = function () {
+      var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (!target) return;
+      var root = document.documentElement, prev = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      target.scrollIntoView({ block: 'start' });
+      root.style.scrollBehavior = prev;
+    };
+    window.addEventListener('load', function () {
+      (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(realign);
+    });
+  }
+
   var navLinks = Array.prototype.slice.call(links.querySelectorAll('a[href^="#"]'));
   var navSections = navLinks
     .map(function (a) { return document.querySelector(a.getAttribute('href')); })

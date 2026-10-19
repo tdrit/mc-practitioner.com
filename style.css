@@ -228,7 +228,7 @@ img, svg { max-width: 100%; }
 .band { height: 14px; background: var(--teal); }
 
 /* ---- sections ---- */
-.section { padding: 52px 0; scroll-margin-top: 84px; }
+.section { padding: 52px 0; scroll-margin-top: 104px; }
 #top { scroll-margin-top: 0; }
 .section.alt { background: var(--paper-alt); }
 .section h2 {
