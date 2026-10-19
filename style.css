@@ -144,7 +144,7 @@ img, svg { max-width: 100%; }
 .hero h1 .dot { font-size: 0.8em; margin-left: 0.04em; }
 /* MCP (business) hero: same type treatment and colors as the top page hero */
 .hero.hero-match h1 { color: #2B2333; font-weight: 700; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.5; text-wrap: wrap; letter-spacing: 0.02em; }
-.hero.hero-match p.lede { color: #50607E; max-width: none; text-wrap: wrap; font-size: 18px; }
+.hero.hero-match p.lede { color: #50607E; max-width: none; text-wrap: wrap; font-size: 18px; margin-bottom: 0; }
 .hero.hero-match .eyebrow { color: #7A6378; background: #DCE4F0; }
 @media (max-width: 640px) { .hero.hero-match .hero-content { text-align: center; padding: 26px 18px; } .hero.hero-match .hero-actions { justify-content: center; } .hero.hero-match h1 { font-size: clamp(21px, 6.2vw, 28px); } .hero.hero-match p.lede { font-size: 15px; } .hero.hero-match p.lede .pc-br { display: none; } .hero.hero-match .eyebrow { font-size: 12px; letter-spacing: 0.04em; } }
 /* dawn-flower gradient button (lavender -> sky -> peach) */
