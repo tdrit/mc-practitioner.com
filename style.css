@@ -488,7 +488,7 @@ table.price td.amount { font-variant-numeric: tabular-nums; white-space: nowrap;
 
 /* section heading icon (diamond motif, echoes the logo mark) */
 .section-icon {
-  display: inline-block; width: 13px; height: 13px; margin: 0 10px -1px 0;
+  display: inline-block; width: 13px; height: 13px; margin: 0 12px 0 2px; vertical-align: middle; position: relative; top: -0.1em;
   background: var(--teal); transform: rotate(45deg); border-radius: 2px;
 }
 
