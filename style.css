@@ -149,9 +149,9 @@ img, svg { max-width: 100%; }
 @media (max-width: 640px) { .hero.hero-match .hero-content { text-align: center; padding: 26px 18px; } .hero.hero-match .hero-actions { justify-content: center; } .hero.hero-match h1 { font-size: clamp(21px, 6.2vw, 28px); } .hero.hero-match p.lede { font-size: 15px; } .hero.hero-match p.lede .pc-br { display: none; } .hero.hero-match .eyebrow { font-size: 12px; letter-spacing: 0.04em; } }
 /* dawn-flower gradient button (lavender -> sky -> peach) */
 .btn-ghost.btn-bloom {
-  background: linear-gradient(120deg, #B7B3E6 0%, #C6D3F1 45%, #F5CFC2 100%);
+  background: linear-gradient(120deg, #ADA9CF 0%, #BCC6DC 45%, #DDC2BA 100%);
   color: #3B3150; border: none; font-weight: 700;
-  box-shadow: 0 4px 14px rgba(120, 110, 180, 0.22);
+  box-shadow: 0 4px 14px rgba(110, 100, 140, 0.20);
   transition: box-shadow .2s ease, transform .2s ease, filter .2s ease;
 }
 .btn-ghost.btn-bloom:hover { filter: brightness(1.04) saturate(1.08); box-shadow: 0 6px 18px rgba(120, 110, 180, 0.30); transform: translateY(-1px); color: #3B3150; }
