@@ -582,6 +582,7 @@ table.price td.amount { font-variant-numeric: tabular-nums; white-space: nowrap;
 .contact-box p { color: rgba(255,255,255,0.9); font-size: 17.5px; margin: 0 0 26px; font-weight: 500; }
 .contact-box .btn-primary { font-size: 17px; padding: 16px 36px; }
 .contact-note { font-size: 13.5px; color: rgba(255,255,255,0.75); margin-top: 20px; }
+.contact-lede { text-align: center; font-size: 17px; font-weight: 600; color: var(--ink-soft); margin: 8px 0 0; }
 .contact-form { max-width: 620px; margin: 28px auto 0; }
 .contact-field {
   display: block; font-size: 15.5px; font-weight: 700; color: var(--ink);
