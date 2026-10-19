@@ -147,6 +147,16 @@ img, svg { max-width: 100%; }
 .hero.hero-match p.lede { color: #50607E; max-width: none; text-wrap: wrap; font-size: 18px; }
 .hero.hero-match .eyebrow { color: #7A6378; background: #DCE4F0; }
 @media (max-width: 640px) { .hero.hero-match .hero-content { text-align: center; padding: 26px 18px; } .hero.hero-match .hero-actions { justify-content: center; } .hero.hero-match h1 { font-size: clamp(21px, 6.2vw, 28px); } .hero.hero-match p.lede { font-size: 15px; } .hero.hero-match p.lede .pc-br { display: none; } .hero.hero-match .eyebrow { font-size: 12px; letter-spacing: 0.04em; } }
+/* dawn-flower gradient button (lavender -> sky -> peach) */
+.btn-ghost.btn-bloom {
+  background: linear-gradient(120deg, #B7B3E6 0%, #C6D3F1 45%, #F5CFC2 100%);
+  color: #3B3150; border: none; font-weight: 700;
+  box-shadow: 0 4px 14px rgba(120, 110, 180, 0.22);
+  transition: box-shadow .2s ease, transform .2s ease, filter .2s ease;
+}
+.btn-ghost.btn-bloom:hover { filter: brightness(1.04) saturate(1.08); box-shadow: 0 6px 18px rgba(120, 110, 180, 0.30); transform: translateY(-1px); color: #3B3150; }
+.btn-ghost.btn-bloom:focus-visible { outline: 3px solid #8C93D6; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .btn-ghost.btn-bloom { transition: none; } .btn-ghost.btn-bloom:hover { transform: none; } }
 /* hero card text colors (card is always light): plum-black title, deep plum lede, mauve label */
 .hero.hero-dawn h1 { color: #2B2333; }
 .hero.hero-dawn p.lede { color: #50607E; }
