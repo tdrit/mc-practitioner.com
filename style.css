@@ -10,6 +10,7 @@
   --teal-deep: #635C62;
   --line: #E2DADC;
   --focus: #746A72;
+  --heading: #4D4049;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -24,6 +25,7 @@
     --teal-deep: #BCACB9;
     --line: #4F484E;
     --focus: #AB97A7;
+    --heading: #CDBDC9;
   }
 }
 
@@ -230,7 +232,7 @@ img, svg { max-width: 100%; }
 #top { scroll-margin-top: 0; }
 .section.alt { background: var(--paper-alt); }
 .section h2 {
-  font-size: clamp(26px, 3.6vw, 32px); margin: 0 0 10px; font-weight: 800; color: var(--navy);
+  font-size: clamp(26px, 3.6vw, 32px); margin: 0 0 10px; font-weight: 800; color: var(--heading);
 }
 .section-lede .nw { white-space: nowrap; }
 .section h2 .nw { white-space: nowrap; }
