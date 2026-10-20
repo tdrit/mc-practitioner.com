@@ -4,3 +4,6 @@
 
 # MC導入のご相談ページのURLパス変更（2026-10-21、/business/ → /MC_practice/）
 /business/*   /MC_practice/:splat   301
+
+# 重複サイト対策（2026-10-21）：netlify.appサブドメインを正式ドメインに一本化
+https://mc-practitioner.netlify.app/*   https://rmc-lab.jp/:splat   301!
