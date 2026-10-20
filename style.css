@@ -169,7 +169,7 @@ img, svg { max-width: 100%; }
 .hero-about { margin: 0; font-size: 19.5px; font-weight: 600; color: #857883; line-height: 1.8; letter-spacing: 0.02em; }
 .hero h1 .dot { font-size: 0.8em; margin-left: 0.04em; }
 /* MCP (business) hero: same type treatment and colors as the top page hero */
-.hero.hero-match h1 { color: #2B2333; font-family: "Caveat", "Segoe Print", cursive; font-weight: 700; font-size: clamp(32px, 4.8vw, 54px); line-height: 1.2; text-wrap: wrap; letter-spacing: 0; }
+.hero.hero-match h1 { color: #726A71; font-family: "Caveat", "Segoe Print", cursive; font-weight: 700; font-size: clamp(32px, 4.8vw, 54px); line-height: 1.2; text-wrap: wrap; letter-spacing: 0; }
 .hero.hero-match p.lede { color: #50607E; max-width: none; text-wrap: wrap; font-size: 18px; margin-bottom: 0; }
 .hero.hero-match .eyebrow { color: #7A6378; background: #DCE4F0; }
 @media (max-width: 640px) { .hero.hero-match .hero-content { text-align: center; padding: 26px 18px; } .hero.hero-match .hero-actions { justify-content: center; } .hero.hero-match h1 { font-size: clamp(21px, 6.2vw, 28px); } .hero.hero-match p.lede { font-size: 15px; } .hero.hero-match .pc-br { display: none; } .hero.hero-match .eyebrow { font-size: 12px; letter-spacing: 0.04em; } }
