@@ -161,7 +161,7 @@ img, svg { max-width: 100%; }
 @media (max-width: 640px) { .hero-logo-deco { opacity: 0.16; width: 260px; } }
 /* top hero: break only between phrases, never inside them */
 .hero .nw { white-space: nowrap; }
-.hero.hero-dawn h1 { text-wrap: wrap; font-weight: 700; font-size: clamp(30px, 4.6vw, 44px); line-height: 1.5; letter-spacing: 0; }
+.hero.hero-dawn h1 { text-wrap: wrap; font-family: "Caveat", "Segoe Print", cursive; font-weight: 700; font-size: clamp(36px, 5.6vw, 62px); line-height: 1.2; letter-spacing: 0.01em; letter-spacing: 0; }
 .hero.hero-dawn p.lede { max-width: none; text-wrap: wrap; }
 .hero.hero-dawn p.lede { margin-bottom: 14px; }
 .hero-org { padding-top: 16px; border-top: 1px solid rgba(143,122,140,0.35); text-align: center; }
