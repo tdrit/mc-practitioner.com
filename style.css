@@ -231,7 +231,7 @@ img, svg { max-width: 100%; }
   display: inline-block; padding: 5px 14px; border-radius: 3px;
 }
 .hero h1 {
-  font-family: "Shippori Mincho", "Hiragino Mincho ProN", "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", "BIZ UDGothic", "Yu Gothic UI", serif;
+  font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", "BIZ UDGothic", "Yu Gothic UI", sans-serif;
   font-size: clamp(30px, 4.6vw, 44px); line-height: 1.5;
   margin: 0 0 20px; font-weight: 700; text-wrap: balance; color: var(--navy-deep);
   word-break: keep-all; overflow-wrap: break-word;
@@ -258,7 +258,6 @@ img, svg { max-width: 100%; }
 #top { scroll-margin-top: 0; }
 .section.alt { background: var(--paper-alt); }
 .section h2 {
-  font-family: "Shippori Mincho", "Hiragino Mincho ProN", serif;
   font-size: clamp(26px, 3.6vw, 32px); margin: 0 0 10px; font-weight: 800; color: var(--heading);
 }
 .section-lede .nw { white-space: nowrap; }
@@ -436,7 +435,6 @@ img, svg { max-width: 100%; }
 .article-back a:hover { text-decoration: underline; }
 .article-back-bottom { margin: 40px 0 0; }
 .article-title {
-  font-family: "Shippori Mincho", "Hiragino Mincho ProN", serif;
   font-size: clamp(24px, 4vw, 32px); font-weight: 800; color: var(--navy); line-height: 1.5;
   margin: 0 0 24px; text-wrap: balance;
 }
