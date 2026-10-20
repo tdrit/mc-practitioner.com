@@ -436,6 +436,9 @@
         result.hidden = false;
         result.scrollIntoView({ behavior: 'smooth', block: 'start' });
         result.focus();
+        if (typeof gtag === 'function') {
+          gtag('event', 'diagnosis_complete', { phase: phaseKey, pattern: patternKey });
+        }
       });
 
       document.getElementById('diag-reset').addEventListener('click', function (e) {

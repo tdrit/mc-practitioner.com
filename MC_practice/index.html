@@ -402,6 +402,9 @@
           success.hidden = false;
           success.scrollIntoView({ behavior: 'smooth', block: 'start' });
           success.focus();
+          if (typeof gtag === 'function') {
+            gtag('event', 'contact_submit');
+          }
         }).catch(function () {
           alert('送信に失敗しました。恐れ入りますが時間をおいて再度お試しください。');
         });

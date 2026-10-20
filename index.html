@@ -254,6 +254,10 @@
               form.hidden = true;
               success.hidden = false;
               success.focus();
+              if (typeof gtag === 'function') {
+                var regType = document.getElementById('member-reg-org').checked ? '組織・部門登録' : '個人登録';
+                gtag('event', 'member_signup', { registration_type: regType });
+              }
             }).catch(function () {
               error.hidden = false;
             });
