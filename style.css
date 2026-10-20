@@ -60,7 +60,7 @@ img, svg { max-width: 100%; }
   border-bottom: 1px solid var(--line);
 }
 .site-logo {
-  font-size: 16px; font-weight: 800; letter-spacing: 0.01em; color: var(--navy); text-decoration: none;
+  font-size: 16px; font-weight: 600; letter-spacing: 0.01em; color: #857883; text-decoration: none;
   white-space: nowrap; display: flex; align-items: center; gap: 4px;
 }
 .logo-mark { width: 70px; height: 70px; display: block; flex-shrink: 0; object-fit: contain; }
@@ -273,13 +273,14 @@ img, svg { max-width: 100%; }
    left-leaning next to the centered hero). Grid-based sections (services,
    pricing, strengths, flow) are intentionally excluded: centering just the
    intro text there would misalign it from the full-width grid below it. */
-#mission h2, #greeting h2, #corp h2, #business h2 {
+#mission h2, #greeting h2, #corp h2, #business h2, #founder h2, #member h2 {
   max-width: 40em; margin-left: auto; margin-right: auto;
 }
-#mission .section-lede, #greeting .greeting-body, #corp .org-info, #business .section-lede {
+#mission .section-lede, #greeting .greeting-body, #corp .org-info, #business .section-lede, #member .section-lede {
   margin-left: auto; margin-right: auto;
 }
 #mission img { margin-left: auto; margin-right: auto; }
+#founder .profile-row { max-width: 680px; margin-left: auto; margin-right: auto; }
 
 /* voice quote */
 .voice-quote {
@@ -521,7 +522,7 @@ table.price td.amount { font-variant-numeric: tabular-nums; white-space: nowrap;
 
 /* greeting (top page) */
 .greeting-body { max-width: 40em; }
-.greeting-body p { font-size: 16.5px; line-height: 2; color: var(--ink); font-weight: 500; margin: 0 0 1.4em; }
+.greeting-body p { font-size: 18px; line-height: 1.85; color: var(--ink-soft); font-weight: 600; margin: 0 0 1.4em; }
 .greeting-rmc { margin: 0 0 1.6em; padding: 18px 22px; border-left: 4px solid var(--teal); background: var(--paper); border-radius: 0 8px 8px 0; display: grid; gap: 8px; }
 .greeting-rmc > div { display: flex; align-items: baseline; gap: 16px; }
 .greeting-rmc dt { font-size: 26px; font-weight: 800; color: var(--navy); width: 1.2em; line-height: 1.2; }
@@ -531,7 +532,7 @@ table.price td.amount { font-variant-numeric: tabular-nums; white-space: nowrap;
 .greeting-sign-name { display: block; font-size: 16px; font-weight: 500; color: var(--ink); margin-top: 4px; letter-spacing: 0.08em; }
 
 /* member sign-up (top page) */
-.contact-form.member-form { margin: 24px 0 0; max-width: 560px; }
+.contact-form.member-form { margin: 24px auto 0; max-width: 560px; }
 .member-form .diag-submit { text-align: left; }
 .member-interests { margin-top: 6px; }
 .member-interests-label { font-size: 15.5px; font-weight: 700; color: var(--ink); margin: 0 0 4px; padding: 0 4px; }
@@ -541,7 +542,7 @@ table.price td.amount { font-variant-numeric: tabular-nums; white-space: nowrap;
 .member-privacy { font-size: 13.5px; color: var(--ink-soft); margin: 0; }
 .member-privacy a { color: var(--teal-deep); }
 .member-error { font-size: 14px; color: #b0432f; margin: 0; font-weight: 700; }
-.member-success { max-width: 560px; margin-top: 24px; }
+.member-success { max-width: 560px; margin: 24px auto 0; }
 .member-success p { margin: 0; font-weight: 600; }
 
 /* profile */
