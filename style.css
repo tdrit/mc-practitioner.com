@@ -98,7 +98,7 @@ img, svg { max-width: 100%; }
   box-shadow: 0 10px 28px rgba(60, 45, 60, 0.16);
   padding: 8px 18px 12px;
 }
-@media (max-width: 759.98px) {
+@media (max-width: 599.98px) {
   .site-nav .site-logo { margin-right: auto; }
   .site-nav .nav-home { order: 1; margin-left: 0; }
   .site-nav .nav-toggle { order: 2; margin-left: 0; margin-right: 6px; }
@@ -109,10 +109,10 @@ img, svg { max-width: 100%; }
 .site-nav-links a { color: inherit; text-decoration: none; padding: 10px 4px; white-space: nowrap; }
 .site-nav-links a:hover { color: var(--teal); }
 .site-nav-links a.is-active { color: var(--teal); }
-@media (min-width: 760px) {
+@media (min-width: 600px) {
   .nav-toggle { display: none; }
   .site-nav-links {
-    display: flex; position: static; flex-direction: row; gap: 24px;
+    display: flex; position: static; flex-direction: row; gap: 18px;
     background: none; border: none; border-radius: 0; box-shadow: none; min-width: 0; padding: 0;
   }
   .site-nav-links a { padding: 0; }
@@ -136,7 +136,7 @@ img, svg { max-width: 100%; }
 .nav-home svg { width: 18px; height: 18px; display: block; }
 .nav-home:hover { filter: brightness(1.06); box-shadow: 0 4px 12px rgba(143, 122, 140, 0.38); }
 .nav-home:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
-@media (min-width: 760px) { .site-nav-links { margin-left: auto; margin-right: 28px; } .site-nav-links + .nav-home { margin-left: 0; } }
+@media (min-width: 600px) { .site-nav-links { margin-left: auto; margin-right: 20px; } .site-nav-links + .nav-home { margin-left: 0; } }
 @media (max-width: 640px) { .nav-home { padding: 7px; margin-right: 8px; } .nav-home-label { display: none; } }
 @media (prefers-reduced-motion: reduce) { .nav-home { transition: none; } }
 
@@ -229,7 +229,7 @@ img, svg { max-width: 100%; }
   display: inline-block; padding: 5px 14px; border-radius: 3px;
 }
 .hero h1 {
-  font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", "BIZ UDGothic", "Yu Gothic UI", sans-serif;
+  font-family: "Shippori Mincho", "Hiragino Mincho ProN", "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", "BIZ UDGothic", "Yu Gothic UI", serif;
   font-size: clamp(30px, 4.6vw, 44px); line-height: 1.5;
   margin: 0 0 20px; font-weight: 700; text-wrap: balance; color: var(--navy-deep);
   word-break: keep-all; overflow-wrap: break-word;
@@ -256,6 +256,7 @@ img, svg { max-width: 100%; }
 #top { scroll-margin-top: 0; }
 .section.alt { background: var(--paper-alt); }
 .section h2 {
+  font-family: "Shippori Mincho", "Hiragino Mincho ProN", serif;
   font-size: clamp(26px, 3.6vw, 32px); margin: 0 0 10px; font-weight: 800; color: var(--heading);
 }
 .section-lede .nw { white-space: nowrap; }
@@ -264,6 +265,19 @@ img, svg { max-width: 100%; }
   color: var(--ink-soft); font-size: 18px; margin: 0 0 28px; max-width: 40em; font-weight: 600;
   word-break: normal; line-break: strict; overflow-wrap: break-word; text-wrap: pretty;
 }
+
+/* block-level centering for text-only sections (text itself stays left-aligned;
+   the whole block is centered within the wider .wrap so it doesn't read as
+   left-leaning next to the centered hero). Grid-based sections (services,
+   pricing, strengths, flow) are intentionally excluded: centering just the
+   intro text there would misalign it from the full-width grid below it. */
+#mission h2, #greeting h2, #corp h2, #business h2 {
+  max-width: 40em; margin-left: auto; margin-right: auto;
+}
+#mission .section-lede, #greeting .greeting-body, #corp .org-info, #business .section-lede {
+  margin-left: auto; margin-right: auto;
+}
+#mission img { margin-left: auto; margin-right: auto; }
 
 /* voice quote */
 .voice-quote {
@@ -419,6 +433,7 @@ img, svg { max-width: 100%; }
 .article-back a:hover { text-decoration: underline; }
 .article-back-bottom { margin: 40px 0 0; }
 .article-title {
+  font-family: "Shippori Mincho", "Hiragino Mincho ProN", serif;
   font-size: clamp(24px, 4vw, 32px); font-weight: 800; color: var(--navy); line-height: 1.5;
   margin: 0 0 24px; text-wrap: balance;
 }
