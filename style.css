@@ -75,6 +75,12 @@ img, svg { max-width: 100%; }
 @media (max-width: 1099.98px) {
   .logo-full { display: none; }
 }
+@media (max-width: 640px) {
+  /* PC向けに入れた強制改行(<br class="pc-br">)は、スマホでは解除して自然に折り返す */
+  .pc-br { display: none; }
+  /* 改行制御用のnowrapスパンも、スマホでは解除してはみ出しを防ぐ */
+  .hero p.lede .nw { white-space: normal; }
+}
 
 /* hamburger toggle (mobile only) */
 .nav-toggle {
@@ -93,7 +99,7 @@ img, svg { max-width: 100%; }
 
 .site-nav-links {
   display: none; gap: 2px; font-size: 15.5px; font-weight: 600; color: var(--ink);
-  position: absolute; top: calc(100% - 6px); right: 16px; left: auto; min-width: 220px; flex-direction: column;
+  position: absolute; top: calc(100% - 6px); right: 16px; left: auto; width: max-content; max-width: 260px; flex-direction: column;
   background: var(--paper); border: 1px solid var(--line); border-radius: 12px;
   box-shadow: 0 10px 28px rgba(60, 45, 60, 0.16);
   padding: 8px 18px 12px;
@@ -264,7 +270,7 @@ img, svg { max-width: 100%; }
 .section h2 .nw { white-space: nowrap; }
 .section .section-lede {
   color: var(--ink-soft); font-size: 18px; margin: 0 0 28px; max-width: 40em; font-weight: 600;
-  word-break: normal; line-break: strict; overflow-wrap: break-word; text-wrap: pretty;
+  word-break: normal; line-break: strict; overflow-wrap: break-word;
 }
 
 /* block-level centering for text-only sections (text itself stays left-aligned;
@@ -522,9 +528,9 @@ table.price td.amount { font-variant-numeric: tabular-nums; white-space: nowrap;
 .greeting-body { max-width: 40em; }
 .greeting-body p { font-size: 18px; line-height: 1.85; color: var(--ink-soft); font-weight: 600; margin: 0 0 1.4em; }
 .greeting-rmc { margin: 0 0 1.6em; padding: 18px 22px; border-left: 4px solid var(--teal); background: var(--paper); border-radius: 0 8px 8px 0; display: grid; gap: 8px; }
-.greeting-rmc > div { display: flex; align-items: baseline; gap: 16px; }
-.greeting-rmc dt { font-size: 26px; font-weight: 800; color: var(--navy); width: 1.2em; line-height: 1.2; }
-.greeting-rmc dd { margin: 0; font-size: 16.5px; color: var(--ink); font-weight: 600; }
+.greeting-rmc > div { display: flex; align-items: flex-start; gap: 16px; }
+.greeting-rmc dt { font-size: 26px; font-weight: 800; color: var(--navy); width: 1.2em; line-height: 1.3; }
+.greeting-rmc dd { margin: 0; font-size: 16.5px; color: var(--ink); font-weight: 600; line-height: 1.3; }
 .greeting-rmc dd span { font-weight: 800; color: var(--navy); }
 .greeting-body p.greeting-sign { text-align: right; margin: 2em 0 0; font-size: 15px; color: var(--ink-soft); }
 .greeting-sign-name { display: block; font-size: 16px; font-weight: 500; color: var(--ink); margin-top: 4px; letter-spacing: 0.08em; }
