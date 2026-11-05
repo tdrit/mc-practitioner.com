@@ -287,6 +287,12 @@ img, svg { max-width: 100%; }
 #mission .section-lede, #greeting .greeting-body, #corp .org-info, #business .section-lede, #member .section-lede {
   margin-left: auto; margin-right: auto;
 }
+.sources {
+  max-width: 720px; margin: 8px auto 0; padding-top: 14px; border-top: 1px solid var(--line);
+  color: var(--ink-soft); font-size: 11px; line-height: 1.6;
+}
+.sources summary { cursor: pointer; font-weight: 700; font-size: 12px; width: fit-content; }
+.sources ol { margin: 6px 0 0; padding-left: 1.6em; }
 #mission img { margin-left: auto; margin-right: auto; }
 #founder .profile-row { max-width: 680px; margin-left: auto; margin-right: auto; }
 
