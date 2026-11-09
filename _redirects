@@ -1,9 +1,13 @@
 # 研究・発信、資料・実績のページは一時的に非公開（2026-10-19）。再公開する場合はこの2行を削除する。
-/research/*   /   302
-/resources/*  /   302
+# 実ファイル(research/index.html, resources/index.html)が残っているため、
+# 強制フラグ(!)を付けないとリダイレクトより実ファイルが優先されてしまう(2026-11-09判明)。
+/research/*   /   302!
+/resources/*  /   302!
 
-# MC導入のご相談ページのURLパス変更（2026-10-21、/business/ → /MC_practice/）
-/business/*   /MC_practice/:splat   301
+# MC導入のご相談ページのURLパス変更（2026-10-21、/business/ → /mc_practice/）
+# 大文字/MC_practice/宛のリンクはNetlifyが/mc_practice/へ自動で再リダイレクトするため、
+# 二重リダイレクトを避けてここでも最初から小文字へ転送する（2026-11-09修正）
+/business/*   /mc_practice/:splat   301
 
 # 重複サイト対策（2026-10-21）：netlify.appサブドメインを正式ドメインに一本化
 https://mc-practitioner.netlify.app/*   https://rmc-lab.jp/:splat   301!
