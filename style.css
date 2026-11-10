@@ -293,6 +293,23 @@ img, svg { max-width: 100%; }
 }
 .sources summary { cursor: pointer; font-weight: 700; font-size: 12px; width: fit-content; }
 .sources ol { margin: 6px 0 0; padding-left: 1.6em; }
+.img-text { max-width: 900px; margin: 0 auto 20px; font-size: 11px; line-height: 1.7; color: var(--ink-soft); }
+.img-text summary { cursor: pointer; font-size: 10.5px; font-weight: 400; opacity: 0.55; width: fit-content; }
+.img-text summary:hover, .img-text summary:focus-visible { opacity: 0.85; }
+.img-text div { margin-top: 8px; }
+.img-text p { margin: 8px 0 0; }
+.img-text ul { margin: 8px 0 0; padding-left: 1.4em; }
+.img-text-title { font-weight: 700; color: var(--ink); opacity: 1; margin-top: 0; }
+.compare-table { width: 100%; border-collapse: collapse; margin: 10px 0 0; font-size: 12.5px; }
+.compare-table th { background: var(--teal); color: #fff; font-weight: 700; padding: 8px 12px; text-align: left; }
+.compare-table td { border: 1px solid var(--line); padding: 10px 12px; vertical-align: top; width: 50%; }
+.compare-table ul { margin: 0; padding-left: 1.2em; }
+.compare-table li { margin: 0 0 4px; }
+.compare-note { margin: 10px 0 0; font-size: 11px; }
+@media (max-width: 480px) {
+  .compare-table { font-size: 11px; }
+  .compare-table th, .compare-table td { padding: 7px 8px; }
+}
 #mission img { margin-left: auto; margin-right: auto; }
 #founder .profile-row { max-width: 680px; margin-left: auto; margin-right: auto; }
 
